@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
 import authReducer from "./state";
-import { conmfigureStore } from "@reduxjs/toolkit";
+import { configureStore } from "@reduxjs/toolkit";
 import { Provider } from 'react-redux';
 import {
   persistStore,
@@ -20,9 +20,9 @@ import { PersistGate } from 'redux-persist/integration/react';
 import g from 'gridfs-stream';
 
 const persistConfig = { key: "root", storage, version: 1 };
-const peristedReducer = persistReducer(persistConfig, authReducer);
+const persistedReducer = persistReducer(persistConfig, authReducer);
 const store = configureStore({
-  reducer: persistReducer,
+  reducer: persistedReducer,
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
       serializableCheck: {
@@ -35,7 +35,12 @@ const store = configureStore({
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <PersistGate loading={null} persistor={persistStore(store)}>
+        <App /> 
+      </PersistGate>
+    </Provider>
+    
   </React.StrictMode>
 );
 
