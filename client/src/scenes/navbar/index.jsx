@@ -31,7 +31,7 @@ const Navbar = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
     const user = useSelector((state) => state.user);
-    const isNonMobileScreens = useMediaQuery("min-width: 1000px") // determines if the current screen size is below x to figure out if user is using smallscreen
+    const isNonMobileScreens = useMediaQuery("(min-width: 1000px)") // determines if the current screen size is below x to figure out if user is using smallscreen
     
     
     const theme = useTheme();
@@ -67,7 +67,7 @@ const Navbar = () => {
                 <FlexBetween backgroundColor={neutralLight} borderRadius="9px" gap="3rem" padding="0.1rem 1.5rem">
                     <InputBase placeholder="Search..."></InputBase>
                     <IconButton>
-                        <Search/>
+                        <Search />
                     </IconButton>
                 </FlexBetween>
             )}
@@ -76,7 +76,7 @@ const Navbar = () => {
         {isNonMobileScreens ? (
         <FlexBetween gap="2rem">
             <IconButton onClick={()=> dispatch(setMode())}>
-                {theme.palette.mode === "dark" ? (
+                { theme.palette.mode === "dark" ? (
                     <DarkMode sx={{fontSize: "25px"}}></DarkMode>
                 ) : (
                     <LightMode sx={{color: dark, fontSize: "25px"}}></LightMode>
