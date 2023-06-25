@@ -38,7 +38,7 @@ const storage = multer.diskStorage({
         cb(null, "public/assets"); // saves user uploaded files to this folder
     },
     filename: function (req,file,cb){
-        cb(null,file.originalName);
+        cb(null,file.originalname);
     }
 });
 

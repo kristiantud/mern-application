@@ -47,7 +47,7 @@ const initialValuesLogin = {
 }
 
 const Form = () => {
-    const { pageType, setPageType } = useState("login");
+    const [ pageType, setPageType ] = useState("register");
     const { palette } = useTheme();
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -131,7 +131,7 @@ const Form = () => {
                         "& > div": { gridColumn: isNonMobile ? undefined : "span 4"},
                     }}
                 >           
-                {!isLogin && (
+                {isRegister && (
                     <>
                         <TextField 
                             label="First Name"
@@ -229,11 +229,12 @@ const Form = () => {
                     error={Boolean(touched.email) && Boolean(errors.email)}
                     helperText={touched.email && errors.email}
                     sx={{
-                        gridColumn: "span 2"
+                        gridColumn: "span 4"
                     }}
                 />
                 <TextField 
                     label="Password"
+                    type="password"
                     onBlur={handleBlur}
                     onChange={handleChange}
                     value={values.password}
@@ -241,7 +242,7 @@ const Form = () => {
                     error={Boolean(touched.password) && Boolean(errors.password)}
                     helperText={touched.password && errors.password}
                     sx={{
-                        gridColumn: "span 2"
+                        gridColumn: "span 4"
                     }}
                 />
                 </Box>
