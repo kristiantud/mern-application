@@ -1,5 +1,6 @@
 import { Box, Typography, useTheme, useMediaQuery } from "@mui/material"
-import Navbar from "scenes/navbar";
+import Form from "./Form";
+
 
 
 const LoginPage = () => {
@@ -17,7 +18,7 @@ const LoginPage = () => {
                 color="primary"
                 
                 >
-                Sociopedia
+                False Social
             </Typography>
         </Box>
         <Box
@@ -29,7 +30,11 @@ const LoginPage = () => {
                 <Typography fontWeight="500" variant="h5" sx={{mb: "1.5rem" }}>
                     Welcome to the False Social, the Social Media for Fake News!
                 </Typography>
+                <Form>
+                </Form>
+        
         </Box>
+
     </Box>
 };
 
