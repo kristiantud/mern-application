@@ -1,5 +1,10 @@
+import Navbar from "scenes/navbar";
+
+
 const HomePage = () => {
-    return (<div>homepage</div>)
+    return (
+        <Navbar></Navbar>
+    )
 };
 
 export default HomePage;
