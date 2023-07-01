@@ -33,7 +33,9 @@ const HomePage = () => {
     
                 </Box>
                 {isNonMobileScreens && (
-                    <Box flexBasis="26%"></Box>
+                    <Box flexBasis="26%">
+                        <h3> Hello World</h3>
+                    </Box>
                 )}
             </Box>
         </Box>

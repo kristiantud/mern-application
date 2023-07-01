@@ -15,8 +15,7 @@ import { setPost } from "state";
 const PostWidget = ({
     postId,
     postUserId,
-    firstName,
-    lastName,
+    name,
     description,
     location,
     picturePath,
