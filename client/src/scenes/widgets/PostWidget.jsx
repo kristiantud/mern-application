@@ -24,9 +24,9 @@ const PostWidget = ({
     comments,
 }) => {
 
-    const [isComments, setIsComments] = useState(false);
+    const [isComments, setIsComments] = useState(true);
     const dispatch = useDispatch();
-    const token = useSelector((state)=> state.token);
+    const token = useSelector((state) => state.token);
     const loggedInUserId = useSelector((state) => state.user._id);
     const isLiked = Boolean(likes[loggedInUserId]);
     const likeCount = Object.keys(likes).length;
@@ -95,19 +95,22 @@ const PostWidget = ({
                     <ShareOutlined />
                 </IconButton>
             </FlexBetween>
+
             {isComments && (
                 <Box mt="0.5rem">
-                    {comments.map((comment, i) => () => {
+                    {comments.map((comment, i) => (
                         <Box key={`${name}-${i}`}>
-                            <Divider />
+                            {/* <Divider /> */}
                             <Typography sx={{color:main, m: "0.5rem 0" , pl: "1rem"}}>
                                 {comment}
                             </Typography>
                         </Box>
-                    })}
-                    <Divider />
+                    ))}
+                    
+                    
                 </Box>
             )}
+
 
         </WidgetWrapper>
 
