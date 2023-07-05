@@ -30,10 +30,14 @@ const PostWidget = ({
     const loggedInUserId = useSelector((state) => state.user._id);
     const isLiked = Boolean(likes[loggedInUserId]);
     const likeCount = Object.keys(likes).length;
+    const allComments = Object.entries(comments);
+    // console.log(allComments.length);
 
+    
     const { palette } = useTheme();
     const primary = palette.primary.main;
     const main = palette.neutral.main;
+
 
     const patchLike = async () => {
         const response = await fetch (`http://localhost:3001/posts/${postId}/like`, {
@@ -87,7 +91,7 @@ const PostWidget = ({
                         <IconButton onClick={() => setIsComments(!isComments)}>
                             <ChatBubbleOutlineOutlined />
                         </IconButton>
-                        <Typography>{comments.length}</Typography>
+                        <Typography>{allComments.length}</Typography>
                     </FlexBetween>
 
                 </FlexBetween>
@@ -98,13 +102,21 @@ const PostWidget = ({
 
             {isComments && (
                 <Box mt="0.5rem">
-                    {comments.forEach((comment, i) => (
-                        <Box key={`${name}-${i}`}>
-                            {/* <Divider /> */}
+                    {/* {comments.map(() => (
+                        <Box key={`${name}`}>
                             <Typography sx={{color:main, m: "0.5rem 0" , pl: "1rem"}}>
-                                {comment}
+                                {comments}
                             </Typography>
                         </Box>
+                    ))} */}
+                    
+                    { allComments.map((comment,i) => (
+                        <Box key={`${name}`}>
+                            <Typography sx={{color:main, m: "0.5rem 0" , pl: "1rem"}}>
+                                <Typography sx={{fontWeight: 'bold'}}>{comment[0]}</Typography> {comment[1]}
+                            </Typography>
+                        </Box>
+                        // console.log(comment)
                     ))}
                     
                     
