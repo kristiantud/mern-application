@@ -98,7 +98,7 @@ const PostWidget = ({
 
             {isComments && (
                 <Box mt="0.5rem">
-                    {comments.map((comment, i) => (
+                    {comments.forEach((comment, i) => (
                         <Box key={`${name}-${i}`}>
                             {/* <Divider /> */}
                             <Typography sx={{color:main, m: "0.5rem 0" , pl: "1rem"}}>
