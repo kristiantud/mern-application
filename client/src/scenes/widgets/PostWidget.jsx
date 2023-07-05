@@ -111,9 +111,9 @@ const PostWidget = ({
                     ))} */}
                     
                     { allComments.map((comment,i) => (
-                        <Box key={`${name}`}>
+                        <Box key={`${name}`} display="flex">
                             <Typography sx={{color:main, m: "0.5rem 0" , pl: "1rem"}}>
-                                <Typography sx={{fontWeight: 'bold'}}>{comment[0]}</Typography> {comment[1]}
+                                <span style={{fontWeight: 'bold'}}>{comment[0]}</span> <span>{comment[1]}</span>
                             </Typography>
                         </Box>
                         // console.log(comment)
