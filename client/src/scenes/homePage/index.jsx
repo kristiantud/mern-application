@@ -29,6 +29,7 @@ const HomePage = () => {
                 >
                     <MyPostWidget picturePath={picturePath}></MyPostWidget>
                     <PostsWidget userId={_id} />
+                    
 
     
                 </Box>
