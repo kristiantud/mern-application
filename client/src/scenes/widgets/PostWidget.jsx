@@ -32,6 +32,7 @@ const PostWidget = ({
     const likeCount = Object.keys(likes).length;
     const allComments = Object.entries(comments);
     // console.log(allComments.length);
+    // console.log(name + " " + picturePath + " " + userPicturePath);
 
     
     const { palette } = useTheme();

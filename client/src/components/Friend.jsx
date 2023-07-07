@@ -33,9 +33,11 @@ const Friend = ({ friendId, name,subtitle, userPicturePath}) => {
                 "Content-Type": "application/json"
             }
         })
-
         const data = await response.json();
         dispatch(setFriends( { friends: data}))
+    }
+
+        
 
         return (
             <FlexBetween>
@@ -78,8 +80,10 @@ const Friend = ({ friendId, name,subtitle, userPicturePath}) => {
                     )}
                 </IconButton>
             </FlexBetween>
+            
+            
         )
     }
-}
+
 
 export default Friend;
