@@ -1,4 +1,5 @@
 import Post from "../models/Posts.js";
+import User from "../models/User.js";
 
 
 // CREATE
@@ -13,7 +14,7 @@ export const createPost = async (req, res) => {
             location: user.location,
             description,
             userPicturePath: user.picturePath,
-            postPicturePath,
+            picturePath,
             likes: {},
             comments: []
         })

@@ -35,7 +35,8 @@ export const register = async (req,res) => {
         });
         
         const savedUser = await newUser.save();
-        res.status(201).json(savedUser);  // send user back (user created) if there's no error
+        res.status(201).send({msg: "success"});  // send user back (user created) if there's no error, important to send back to prevent blocking but lemme try something real quick
+        // we don't need to send back the savedUser to the frontend client because this is a security risk, this will cause the password, even though it is hashed, to be sent back which is a security risk
     } catch (error){
         res.status(500).json({error: error.message});
     }
