@@ -158,14 +158,14 @@ export const posts = [
       [userIds[3], true],
       [userIds[4], true],
     ]),
-    comments: new Map([
-      [userIds[0], "one more random comment"],
-      [userIds[1], "I lied again, one more random comment"],
-      [userIds[2], "no more random comments"],
-      [userIds[3], "I lied, one more random comment"],
-      [userIds[4], "Why am I doing this?"],
-      [userIds[5], "I'm bored"]
-    ])
+    comments: [
+      [userIds[1],"Steve Ralph","one more random comment"],
+      [userIds[2],"Some Guy","I lied again, one more random comment"],
+      [userIds[3],"Whatcha Doing","no more random comments"],
+      [userIds[4],"Jane Doe","Shinagamis love apples"],
+      [userIds[5],"Harvey Dunn","Why am I doing this?"],
+      [userIds[6],"Carly Vowel","I'm bored"],
+    ]
   },
   {
     _id: new mongoose.Types.ObjectId(),
@@ -183,14 +183,14 @@ export const posts = [
       [userIds[1], true],
       [userIds[2], true],
     ]),
-    comments: new Map([
-      [userIds[0], "one more random comment"],
-      [userIds[1], "I lied again, one more random comment"],
-      [userIds[2], "no more random comments"],
-      [userIds[3], "I lied, one more random comment"],
-      [userIds[4], "Why am I doing this?"],
-      [userIds[5], "I'm bored"]
-    ])
+    comments: [
+      [userIds[1],"Steve Ralph","one more random comment"],
+      [userIds[2],"Some Guy","I lied again, one more random comment"],
+      [userIds[3],"Whatcha Doing","no more random comments"],
+      [userIds[4],"Jane Doe","Shinagamis love apples"],
+      [userIds[5],"Harvey Dunn","Why am I doing this?"],
+      [userIds[6],"Carly Vowel","I'm bored"],
+    ]
   },
   {
     _id: new mongoose.Types.ObjectId(),
@@ -208,14 +208,14 @@ export const posts = [
       [userIds[3], true],
       [userIds[5], true],
     ]),
-    comments: new Map([
-      [userIds[0], "one more random comment"],
-      [userIds[1], "I lied again, one more random comment"],
-      [userIds[2], "no more random comments"],
-      [userIds[3], "I lied, one more random comment"],
-      [userIds[4], "Why am I doing this?"],
-      [userIds[5], "I'm bored"]
-    ])
+    comments: [
+      [userIds[1],"Steve Ralph","one more random comment"],
+      [userIds[2],"Some Guy","I lied again, one more random comment"],
+      [userIds[3],"Whatcha Doing","no more random comments"],
+      [userIds[4],"Jane Doe","Shinagamis love apples"],
+      [userIds[5],"Harvey Dunn","Why am I doing this?"],
+      [userIds[6],"Carly Vowel","I'm bored"],
+    ]
   },
   {
     _id: new mongoose.Types.ObjectId(),
@@ -232,14 +232,14 @@ export const posts = [
       [userIds[6], true],
       [userIds[3], true],
     ]),
-    comments: new Map([
-      [userIds[0], "one more random comment"],
-      [userIds[1], "I lied again, one more random comment"],
-      [userIds[2], "no more random comments"],
-      [userIds[3], "I lied, one more random comment"],
-      [userIds[4], "Why am I doing this?"],
-      [userIds[5], "I'm bored"]
-    ])
+    comments: [
+      [userIds[1],"Steve Ralph","one more random comment"],
+      [userIds[2],"Some Guy","I lied again, one more random comment"],
+      [userIds[3],"Whatcha Doing","no more random comments"],
+      [userIds[4],"Jane Doe","Shinagamis love apples"],
+      [userIds[5],"Harvey Dunn","Why am I doing this?"],
+      [userIds[6],"Carly Vowel","I'm bored"],
+    ]
   },
   {
     _id: new mongoose.Types.ObjectId(),
@@ -257,14 +257,14 @@ export const posts = [
       [userIds[5], true],
       [userIds[7], true],
     ]),
-    comments: new Map([
-      [userIds[0], "one more random comment"],
-      [userIds[1], "I lied again, one more random comment"],
-      [userIds[2], "no more random comments"],
-      [userIds[3], "I lied, one more random comment"],
-      [userIds[4], "Why am I doing this?"],
-      [userIds[5], "I'm bored"]
-    ])
+    comments: [
+      [userIds[1],"Steve Ralph","one more random comment"],
+      [userIds[2],"Some Guy","I lied again, one more random comment"],
+      [userIds[3],"Whatcha Doing","no more random comments"],
+      [userIds[4],"Jane Doe","Shinagamis love apples"],
+      [userIds[5],"Harvey Dunn","Why am I doing this?"],
+      [userIds[6],"Carly Vowel","I'm bored"],
+    ]
   },
   {
     _id: new mongoose.Types.ObjectId(),
@@ -280,13 +280,13 @@ export const posts = [
       [userIds[1], true],
       [userIds[2], true],
     ]),
-    comments: new Map([
-      [userIds[0], "one more random comment"],
-      [userIds[1], "I lied again, one more random comment"],
-      [userIds[2], "no more random comments"],
-      [userIds[3], "I lied, one more random comment"],
-      [userIds[4], "Why am I doing this?"],
-      [userIds[5], "I'm bored"]
-    ])
+    comments: [
+      [userIds[1],"Steve Ralph","one more random comment"],
+      [userIds[2],"Some Guy","I lied again, one more random comment"],
+      [userIds[3],"Whatcha Doing","no more random comments"],
+      [userIds[4],"Jane Doe","Shinagamis love apples"],
+      [userIds[5],"Harvey Dunn","Why am I doing this?"],
+      [userIds[6],"Carly Vowel","I'm bored"],
+    ]
   },
 ];
