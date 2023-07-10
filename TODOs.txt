@@ -2,3 +2,4 @@
 - Fix user being able to add themselves. If userId is the same as the userPostId, remove the ability to add
    - also, on add, if the userIds are the same, fix logic so that this is not allowed
 - implement notification functionality
+- make comment its own widget to allow us to query for names

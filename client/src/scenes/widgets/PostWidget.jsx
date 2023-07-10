@@ -10,6 +10,7 @@ import WidgetWrapper from "components/WidgetWrapper";
 import { useState } from "react";
 import { useDispatch,useSelector } from "react-redux";
 import { setPost } from "state";
+import CommentsWidget from "./CommentsWidget";
 
 
 const PostWidget = ({
@@ -102,26 +103,30 @@ const PostWidget = ({
             </FlexBetween>
 
             {isComments && (
-                <Box mt="0.5rem">
-                    {/* {comments.map(() => (
+                
+                <CommentsWidget comments={allComments} />
+                
+                
+                    /* {comments.map(() => (
                         <Box key={`${name}`}>
                             <Typography sx={{color:main, m: "0.5rem 0" , pl: "1rem"}}>
                                 {comments}
                             </Typography>
                         </Box>
-                    ))} */}
+                    ))} */
                     
-                    { allComments.map((comment,i) => (
+                    
+                    /* { allComments.map((comment,i) => (
                         <Box key={`${name}`} display="flex">
                             <Typography sx={{color:main, m: "0.5rem 0" , pl: "1rem"}}>
                                 <span style={{fontWeight: 'bold'}}>{comment[0]}</span> <span>{comment[1]}</span>
                             </Typography>
                         </Box>
-                        // console.log(comment)
-                    ))}
+                        
+                    ))} */
                     
                     
-                </Box>
+                
             )}
 
 
