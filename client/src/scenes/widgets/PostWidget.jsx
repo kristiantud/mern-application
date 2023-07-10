@@ -3,7 +3,7 @@ import { ChatBubbleOutlineOutlined,
         FavoriteOutlined,
         ShareOutlined,
 } from "@mui/icons-material";
-import { Box, Divider, IconButton, Typography, useTheme } from "@mui/material";
+import { Box, Divider, IconButton, Typography, useTheme, InputBase } from "@mui/material";
 import FlexBetween from "components/FlexBetween";
 import Friend from "components/Friend";
 import WidgetWrapper from "components/WidgetWrapper";
@@ -11,6 +11,7 @@ import { useState } from "react";
 import { useDispatch,useSelector } from "react-redux";
 import { setPost } from "state";
 import CommentsWidget from "./CommentsWidget";
+import UserImage from "components/UserImage";
 
 
 const PostWidget = ({
@@ -23,6 +24,7 @@ const PostWidget = ({
     userPicturePath,
     likes,
     comments,
+    mainUserPicturePath
 }) => {
 
     const [isComments, setIsComments] = useState(true);
@@ -103,8 +105,11 @@ const PostWidget = ({
             </FlexBetween>
 
             {isComments && (
+                <>
+                    <CommentsWidget comments={allComments} mainUserPicturePath={mainUserPicturePath}/>
+                    
+                </>
                 
-                <CommentsWidget comments={allComments} />
                 
                 
                     /* {comments.map(() => (

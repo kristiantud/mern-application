@@ -38,6 +38,7 @@ const MyPostWidget = ({ picturePath }) => {
     const isNonMobileScreens = useMediaQuery("(min-width: 1000px)");
     const mediumMain = palette.neutral.mediumMain;
     const medium = palette.neutral.medium;
+
     
     
     const handlePost = async () => {
