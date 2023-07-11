@@ -43,7 +43,7 @@ const PostsWidget = ({mainUserPicturePath, userId, isProfile = false}) => {
         <>
             {/* {console.log("contents of posts: " + Object.values(posts[0]))} */}
             {/* {console.log(postsAsArray)} */}
-            {console.log(posts)}
+            {/* {console.log(posts)} */}
             {posts.toReversed().map(
                 ({
                     _id,

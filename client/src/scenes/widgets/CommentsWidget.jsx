@@ -17,7 +17,7 @@ const CommentsWidget = ({comments, mainUserPicturePath}) => {
 
     return (
         <Box mt="0.5rem">
-            {console.log(comments)}
+            {/* {console.log(comments)} */}
             { comments.map((comment, i) => (
                 <Box display="flex">
                     <Typography sx={{color:main, m: "0.5rem 0" , pl: "1rem"}}>
@@ -40,7 +40,7 @@ const CommentsWidget = ({comments, mainUserPicturePath}) => {
                     sx={{
                         color: palette.background.alt,
                         backgroundColor: palette.primary.main,
-                        borderRadius: "3rem",
+                        borderRadius: "2rem",
                         height: "40px"
                     }}
                     >

@@ -1,5 +1,5 @@
-- Create backend endpoint that clients can use to request names based off the userId that they have
+- Create backend endpoint that clients can use to request names based off the userId that they have -- DONE
 - Fix user being able to add themselves. If userId is the same as the userPostId, remove the ability to add
-   - also, on add, if the userIds are the same, fix logic so that this is not allowed
+   - also, on add, if the userIds are the same, fix logic so that this is not allowed -- DONE
 - implement notification functionality
-- make comment its own widget to allow us to query for names
+- make comment its own widget to allow us to query for names -- DONE
