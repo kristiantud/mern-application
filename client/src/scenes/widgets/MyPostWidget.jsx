@@ -70,14 +70,15 @@ const MyPostWidget = ({ picturePath }) => {
             <FlexBetween gap="1.5rem">
                 <UserImage image={picturePath} />
                 <InputBase placeholder="What's on your mind..."
-                onChange={(e) => setPost(e.target.value)}
-                value={post}
-                sx={{
-                    width: "100%",
-                    backgroundColor: palette.neutral.light,
-                    borderRadius: "2rem",
-                    padding: "1rem 2rem"
-                }} />      
+                    onChange={(e) => setPost(e.target.value)}
+                    value={post}
+                    sx={{
+                        width: "100%",
+                        backgroundColor: palette.neutral.light,
+                        borderRadius: "2rem",
+                        padding: "1rem 2rem"
+                    }} 
+                />      
             </FlexBetween>
             {isImage && (
                 <Box
