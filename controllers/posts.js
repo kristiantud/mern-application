@@ -50,9 +50,16 @@ export const postComment = async (req,res) => {
         // console.log(newComment);
 
         post.comments.push(newComment);
-        await post.save();
+        // await post.save();
         // console.log(post.comments);
-        const updatedPost = await Post.find({_id: postId});
+
+        const updatedPost = await Post.findByIdAndUpdate(
+            postId,
+            { comments: post.comments },
+            { new: true }, 
+        )
+
+        // console.log(updatedPost);
         res.status(201).json(updatedPost);
     }catch (error) {
         res.status(404).json(error.message);
@@ -84,7 +91,7 @@ export const getUserPosts = async (req, res) => {
 export const likePosts = async (req,res) => {
     try {
 
-        console.log(req.body);
+        // console.log(req.body);
         const { id } = req.params;
         const { userId } = req.body;
         const post = await Post.findById(id);
@@ -101,6 +108,8 @@ export const likePosts = async (req,res) => {
             { likes: post.likes },
             { new: true }, 
         )
+
+        // console.log(updatedPost);
 
         res.status(200).json(updatedPost);
     } catch (error) {

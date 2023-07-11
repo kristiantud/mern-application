@@ -38,6 +38,7 @@ const CommentsWidget = ({comments, mainUserPicturePath, postId, name, loggedInUs
 
        // handle the response
        const updatedPost = await response.json();
+       console.log(updatedPost);
        dispatch(setPost({ post: updatedPost }));
    } 
 
