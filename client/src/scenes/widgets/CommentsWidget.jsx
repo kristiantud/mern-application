@@ -21,6 +21,7 @@ const CommentsWidget = ({comments, mainUserPicturePath, postId, name, loggedInUs
     
 
     const handleCommentPost = async () => {
+        
         const response = await fetch(`http://localhost:3001/posts`, {
             method: "PATCH",
             headers: { Authorization: `Bearer ${token}`,
@@ -38,8 +39,9 @@ const CommentsWidget = ({comments, mainUserPicturePath, postId, name, loggedInUs
 
        // handle the response
        const updatedPost = await response.json();
-       console.log(updatedPost);
+    //    console.log(updatedPost);
        dispatch(setPost({ post: updatedPost }));
+       setCommentPost(""); // clears the comment textbox
    } 
 
 
