@@ -28,6 +28,37 @@ export const createPost = async (req, res) => {
     }
 } 
 
+export const postComment = async (req,res) => {
+    try {
+        const { userId } = req.body;
+        const { name } = req.body;
+        const { postId } = req.body;
+        const { commentPost } = req.body;
+        
+        
+
+        const post = await Post.findById(postId);
+        if (!post) res.status(404).json({message:postId + " post doesn't exist."});
+
+        // console.log(post.comments);
+        
+        
+        
+
+        const newComment = [userId, name, commentPost];
+
+        // console.log(newComment);
+
+        post.comments.push(newComment);
+        await post.save();
+        // console.log(post.comments);
+        const updatedPost = await Post.find({_id: postId});
+        res.status(201).json(updatedPost);
+    }catch (error) {
+        res.status(404).json(error.message);
+    }
+}
+
 // READ
 export const getFeedPosts = async (req,res) => {
     try {
@@ -52,6 +83,8 @@ export const getUserPosts = async (req, res) => {
 // UPDATE
 export const likePosts = async (req,res) => {
     try {
+
+        console.log(req.body);
         const { id } = req.params;
         const { userId } = req.body;
         const post = await Post.findById(id);

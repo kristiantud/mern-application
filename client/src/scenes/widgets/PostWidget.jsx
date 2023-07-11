@@ -14,6 +14,8 @@ import CommentsWidget from "./CommentsWidget";
 import UserImage from "components/UserImage";
 
 
+
+
 const PostWidget = ({
     postId,
     postUserId,
@@ -55,6 +57,7 @@ const PostWidget = ({
         const updatedPost = await response.json();
         dispatch(setPost({ post: updatedPost }));
     }
+
    
     return (
         <WidgetWrapper m="2rem 0">
@@ -107,7 +110,12 @@ const PostWidget = ({
 
             {isComments && (
                 <>
-                    <CommentsWidget comments={allComments} mainUserPicturePath={mainUserPicturePath}/>
+                    <CommentsWidget comments={allComments} 
+                                    mainUserPicturePath={mainUserPicturePath}
+                                    postId={postId}
+                                    name={name}
+                                    loggedInUserId={loggedInUserId}         
+                    />
                     
                 </>
                 
