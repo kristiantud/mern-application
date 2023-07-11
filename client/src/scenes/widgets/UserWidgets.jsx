@@ -82,13 +82,13 @@ const UserWidget = ({ userId, picturePath}) => {
 
                 <Divider />
                 { /* SECOND ROW */}
-                <Box p="1rem 0">
+                <Box p="1rem 0 0.25rem 0">
                     <Box display="flex" alignItems="center" gap="1rem" mb="0.5rem">
                         <LocationOnOutlined fontSize="large" sx={{color: main}}></LocationOnOutlined>
                         <Typography color={medium}>{location}</Typography>
                     </Box>
                 </Box>
-                <Box p="1rem 0">
+                <Box p="0.25rem 0 1rem 0">
                     <Box display="flex" alignItems="center" gap="1rem">
                         <WorkOutlineOutlined fontSize="large" sx={{color: main}}></WorkOutlineOutlined>
                         <Typography color={medium}>{occupation}</Typography>
@@ -96,7 +96,7 @@ const UserWidget = ({ userId, picturePath}) => {
                 </Box>
 
                 {/* THIRD ROW */}
-                <Box p="1rem 0">
+                <Box p="0 0 1rem 0">
                     <FlexBetween mb="0.5rem">
                         <Typography color={medium}>Who's viewed your profile</Typography>
                         <Typography color={main} fontWeight="500">{viewedProfile}</Typography>
