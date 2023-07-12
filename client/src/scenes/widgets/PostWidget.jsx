@@ -33,6 +33,7 @@ const PostWidget = ({
     const dispatch = useDispatch();
     const token = useSelector((state) => state.token);
     const loggedInUserId = useSelector((state) => state.user._id);
+    const loggedInUserName = useSelector((state) => (state.user.firstName + " " + state.user.lastName));
     const isLiked = Boolean(likes[loggedInUserId]);
     const likeCount = Object.keys(likes).length;
     const allComments = Object.entries(comments);
@@ -114,7 +115,7 @@ const PostWidget = ({
                     <CommentsWidget comments={allComments} 
                                     mainUserPicturePath={mainUserPicturePath}
                                     postId={postId}
-                                    name={name}
+                                    name={loggedInUserName}
                                     loggedInUserId={loggedInUserId}         
                     />
                     

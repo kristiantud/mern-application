@@ -3,3 +3,4 @@
    - also, on add, if the userIds are the same, fix logic so that this is not allowed -- DONE
 - implement notification functionality
 - make comment its own widget to allow us to query for names -- DONE
+- ability to post comments -- DONE
