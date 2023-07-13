@@ -82,7 +82,9 @@ const Navbar = () => {
                 )}
             </IconButton>
             <Message sx={{color: dark, fontSize: "25px"}}></Message>
-            <Notifications sx={{color: dark, fontSize: "25px"}} />
+            <IconButton>
+                <Notifications onClick={() => navigate("/notifications")} sx={{color: dark, fontSize: "25px"}} />
+            </IconButton>
             <Help sx={{color: dark, fontSize: "25px"}}></Help>   
             <FormControl variant="standard" value={fullName}>
                 <Select value={fullName}
