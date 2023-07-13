@@ -10,6 +10,7 @@ import { setPost } from "state";
 
 
 
+
 const CommentsWidget = ({comments, mainUserPicturePath, postId, name, loggedInUserId}) => {
 
     const { palette } = useTheme();
@@ -42,6 +43,9 @@ const CommentsWidget = ({comments, mainUserPicturePath, postId, name, loggedInUs
     //    console.log(updatedPost);
        dispatch(setPost({ post: updatedPost }));
        setCommentPost(""); // clears the comment textbox
+
+       // handle sending notifications to all users in the comments section
+       
    } 
 
 

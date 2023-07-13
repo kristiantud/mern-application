@@ -12,6 +12,7 @@ import { useDispatch,useSelector } from "react-redux";
 import { setPost } from "state";
 import CommentsWidget from "./CommentsWidget";
 import UserImage from "components/UserImage";
+import { addData, getData } from "../../state/notifData";
 
 
 
@@ -37,7 +38,7 @@ const PostWidget = ({
     const isLiked = Boolean(likes[loggedInUserId]);
     const likeCount = Object.keys(likes).length;
     const allComments = Object.entries(comments);
-    // console.log(allComments.length);
+    // console.log(allComments);
     // console.log(name + " " + picturePath + " " + userPicturePath);
 
     
@@ -112,6 +113,7 @@ const PostWidget = ({
 
             {isComments && (
                 <>
+                    {addData([postId,allComments])}
                     <CommentsWidget comments={allComments} 
                                     mainUserPicturePath={mainUserPicturePath}
                                     postId={postId}

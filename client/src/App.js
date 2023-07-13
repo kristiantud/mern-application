@@ -23,7 +23,7 @@ function App() {
         <Route path="/" element={isAuth ? <HomePage /> : <LoginPage /> } />
         <Route path="/home" element={isAuth ? <HomePage /> : <Navigate to="/"/> } />
         <Route path="/profile/:userId" element={isAuth ? <ProfilePage /> : <Navigate to="/"/> } />
-        <Route path="/notifications" element={< Notifications />} />
+        <Route path="/notifications" element={isAuth ? <Notifications /> : <LoginPage/> } />
       </Routes>
     </ThemeProvider>
    </BrowserRouter>
