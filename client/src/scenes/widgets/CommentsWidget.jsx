@@ -5,13 +5,14 @@ import { useState } from "react";
 import { useSelector } from "react-redux";
 import { useDispatch } from "react-redux";
 import { setPost } from "state";
+import { getData } from "../../state/notifData";
 
 
 
 
 
 
-const CommentsWidget = ({comments, mainUserPicturePath, postId, name, loggedInUserId}) => {
+const CommentsWidget = ({comments, mainUserPicturePath, postId, name, loggedInUserId, postUserId}) => {
 
     const { palette } = useTheme();
     const [commentPost, setCommentPost] = useState("");
@@ -45,6 +46,27 @@ const CommentsWidget = ({comments, mainUserPicturePath, postId, name, loggedInUs
        setCommentPost(""); // clears the comment textbox
 
        // handle sending notifications to all users in the comments section
+       // we need to notify: the person who posted (if !isMe), and everyone else in the getData that !isMe
+    //    console.log(getData(postId));
+       var userIds = [];
+       var Ids = getData(postId);
+
+       for (var x = 0; x < Ids.length; x++){
+        if (Ids[x][0] !== loggedInUserId){
+            userIds.push(Ids[x][0]);
+        }
+       }
+
+       if (postUserId !== loggedInUserId){
+            if (!userIds.includes(postUserId)){
+                userIds.push(postUserId);
+            }
+       }
+
+    //    console.log("all ids: " + userIds);
+       // make a fetch call to server to add a notification to all the people in userIds only if userIds.length > 0
+
+
        
    } 
 

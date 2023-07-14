@@ -36,6 +36,7 @@ export function addData(postData){
 }
 
 export function getData(postId){
+    // console.log(postsCommenters.posts);
     return postsCommenters.posts.get(postId);
 }
 

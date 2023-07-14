@@ -117,6 +117,7 @@ const PostWidget = ({
                     <CommentsWidget comments={allComments} 
                                     mainUserPicturePath={mainUserPicturePath}
                                     postId={postId}
+                                    postUserId={postUserId}
                                     name={loggedInUserName}
                                     loggedInUserId={loggedInUserId}         
                     />
