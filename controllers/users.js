@@ -66,3 +66,13 @@ export const addRemoveFriend = async (req,res) => {
         res.status(404).json({ message: error.message });
     } 
 }
+
+export const notifyUsers = async (req, res) => {
+    try {
+        console.log(req.body);
+    } catch (error){ 
+        res.status(404).json({message: error.message});
+    }
+
+
+}

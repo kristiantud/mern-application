@@ -53,7 +53,9 @@ const CommentsWidget = ({comments, mainUserPicturePath, postId, name, loggedInUs
 
        for (var x = 0; x < Ids.length; x++){
         if (Ids[x][0] !== loggedInUserId){
-            userIds.push(Ids[x][0]);
+            if (!userIds.includes(Ids[x][0])){
+                userIds.push(Ids[x][0]);
+            }
         }
        }
 
@@ -62,6 +64,19 @@ const CommentsWidget = ({comments, mainUserPicturePath, postId, name, loggedInUs
                 userIds.push(postUserId);
             }
        }
+
+       console.log(userIds);
+
+    //    const notifyUsers = await fetch(`http://localhost:3001/users/notify`, {
+    //         method: "POST",
+    //         headers: { Authorization: `Bearer ${token}`,
+    //                     "Content-Type": "application/json"},
+    //         body: userIds
+    //    })
+
+
+
+       
 
     //    console.log("all ids: " + userIds);
        // make a fetch call to server to add a notification to all the people in userIds only if userIds.length > 0
