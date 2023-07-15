@@ -65,14 +65,16 @@ const CommentsWidget = ({comments, mainUserPicturePath, postId, name, loggedInUs
             }
        }
 
-       console.log(userIds);
+    //    console.log(JSON.stringify(userIds));
 
-    //    const notifyUsers = await fetch(`http://localhost:3001/users/notify`, {
-    //         method: "POST",
-    //         headers: { Authorization: `Bearer ${token}`,
-    //                     "Content-Type": "application/json"},
-    //         body: userIds
-    //    })
+
+       const notifyUsers = await fetch(`http://localhost:3001/users/notifyComment`, {
+            method: "POST",
+            headers: { Authorization: `Bearer ${token}`,
+                        "Content-Type": "application/json"},
+            body: JSON.stringify(userIds)
+                                    
+        })
 
 
 

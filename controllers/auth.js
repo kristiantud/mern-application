@@ -31,7 +31,8 @@ export const register = async (req,res) => {
             location,
             occupation,
             viewedProfile: Math.floor(Math.random() * 10000),
-            impressions: Math.floor(Math.random() * 10000)
+            impressions: Math.floor(Math.random() * 10000),
+            notifications: [["randompostid","comment","name"]]
         });
         
         const savedUser = await newUser.save();

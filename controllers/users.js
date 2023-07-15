@@ -67,9 +67,15 @@ export const addRemoveFriend = async (req,res) => {
     } 
 }
 
-export const notifyUsers = async (req, res) => {
+export const notifyUsersComment = async (req, res) => {
     try {
-        console.log(req.body);
+        // console.log(req.body);
+        // now, we're going to loop through each of these guys 
+        for (var x = 0; x < req.body.length; x++){
+            // console.log(await User.findById(req.body[x]));
+            // 
+        }
+
     } catch (error){ 
         res.status(404).json({message: error.message});
     }
