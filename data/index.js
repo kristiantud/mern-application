@@ -25,7 +25,7 @@ export const users = [
     viewedProfile: 14561,
     impressions: 888822,
     notifications: [
-      []
+      ["randomPostId", "comment", "randomName", false]
     ],
     createdAt: 1115211422,
     updatedAt: 1115211422,
@@ -44,7 +44,7 @@ export const users = [
     viewedProfile: 12351,
     impressions: 55555,
     notifications: [
-      []
+      ["randomPostId", "comment", "randomName", false]
     ],
     createdAt: 1595589072,
     updatedAt: 1595589072,
@@ -63,7 +63,7 @@ export const users = [
     viewedProfile: 45468,
     impressions: 19986,
     notifications: [
-      []
+      ["randomPostId", "comment", "randomName", false]
     ],
     createdAt: 1288090662,
     updatedAt: 1288090662,
@@ -82,7 +82,7 @@ export const users = [
     viewedProfile: 41024,
     impressions: 55316,
     notifications: [
-      []
+      ["randomPostId", "comment", "randomName", false]
     ],
     createdAt: 1219214568,
     updatedAt: 1219214568,
@@ -101,7 +101,7 @@ export const users = [
     viewedProfile: 40212,
     impressions: 7758,
     notifications: [
-      []
+      ["randomPostId", "comment", "randomName", false]
     ],
     createdAt: 1493463661,
     updatedAt: 1493463661,
@@ -120,7 +120,7 @@ export const users = [
     viewedProfile: 976,
     impressions: 4658,
     notifications: [
-      []
+      ["randomPostId", "comment", "randomName", false]
     ],
     createdAt: 1381326073,
     updatedAt: 1381326073,
@@ -139,7 +139,7 @@ export const users = [
     viewedProfile: 1510,
     impressions: 77579,
     notifications: [
-      []
+      ["randomPostId", "comment", "randomName", false]
     ],
     createdAt: 1714704324,
     updatedAt: 1642716557,
@@ -158,7 +158,7 @@ export const users = [
     viewedProfile: 19420,
     impressions: 82970,
     notifications: [
-      []
+      ["randomPostId", "comment", "randomName", false]
     ],
     createdAt: 1369908044,
     updatedAt: 1359322268,

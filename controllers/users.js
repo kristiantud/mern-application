@@ -69,11 +69,17 @@ export const addRemoveFriend = async (req,res) => {
 
 export const notifyUsersComment = async (req, res) => {
     try {
-        // console.log(req.body);
+        // console.log(Object.keys(req.body));
+        const userIds = Object.keys(req.body);
+
+        // console.log(Object.values(req.body)[0]);
+
         // now, we're going to loop through each of these guys 
-        for (var x = 0; x < req.body.length; x++){
-            // console.log(await User.findById(req.body[x]));
-            // 
+        for (var x = 0; x < userIds.length; x++){
+            var user = await User.findById(userIds[x]);
+            user.notifications.push(Object.values(req.body)[0]);
+            
+            await user.save();
         }
 
     } catch (error){ 

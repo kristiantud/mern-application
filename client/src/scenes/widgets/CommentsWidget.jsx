@@ -65,14 +65,21 @@ const CommentsWidget = ({comments, mainUserPicturePath, postId, name, loggedInUs
             }
        }
 
-    //    console.log(JSON.stringify(userIds));
+       const notifMap = new Map();
+       const notifPackage = [postId,name,"comment",false];
+       for (var x = 0; x < userIds.length; x++){
+            notifMap.set(userIds[x],notifPackage);
+       }
+       const notifObj = Object.fromEntries(notifMap);
 
+    //    console.log(JSON.stringify(userIds));
+       console.log(JSON.stringify(notifObj));
 
        const notifyUsers = await fetch(`http://localhost:3001/users/notifyComment`, {
             method: "POST",
             headers: { Authorization: `Bearer ${token}`,
                         "Content-Type": "application/json"},
-            body: JSON.stringify(userIds)
+            body: JSON.stringify(notifObj)
                                     
         })
 
