@@ -12,6 +12,7 @@ const HomePage = () => {
     const { _id, picturePath } = useSelector((state) => state.user);
 
 
+
     return (
         <Box>
             <Navbar />

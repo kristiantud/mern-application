@@ -3,7 +3,8 @@ import {
     getUser,
     getUserFriends,
     addRemoveFriend,
-    notifyUsersComment
+    notifyUsersComment,
+    notifyUsersLike
     
  } from "../controllers/users.js";
 import { verifyToken } from "../middleware/auth.js";
@@ -21,6 +22,7 @@ router.patch("/:id/:friendId", verifyToken, addRemoveFriend);
 
 // POST
 router.post("/notifyComment", verifyToken, notifyUsersComment);
+router.post("/notifyLike", verifyToken, notifyUsersLike);
 
 
 export default router;

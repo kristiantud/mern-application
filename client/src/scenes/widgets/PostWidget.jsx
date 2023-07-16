@@ -57,8 +57,26 @@ const PostWidget = ({
             body: JSON.stringify({ userId: loggedInUserId})
         });
         const updatedPost = await response.json();
-        console.log(updatedPost);
+        // console.log(updatedPost);
         dispatch(setPost({ post: updatedPost }));
+
+        const notifPackage = [postId,name,"like",false];
+        const notifMap = new Map();
+        notifMap.set(postUserId, notifPackage);
+        const notifObj = Object.fromEntries(notifMap);
+
+        // notify the user who posted of the like
+        if (!isLiked){
+            await fetch (`http://localhost:3001/users/notifyLike`, {
+                method: "POST",
+                headers: {
+                    Authorization: `Bearer ${token}`,
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify(notifObj)
+            })
+        }
+        
     }
 
    

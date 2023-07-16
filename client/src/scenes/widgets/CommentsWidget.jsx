@@ -43,7 +43,7 @@ const CommentsWidget = ({comments, mainUserPicturePath, postId, name, loggedInUs
        const updatedPost = await response.json();
     //    console.log(updatedPost);
        dispatch(setPost({ post: updatedPost }));
-       setCommentPost(""); // clears the comment textbox
+       
 
        // handle sending notifications to all users in the comments section
        // we need to notify: the person who posted (if !isMe), and everyone else in the getData that !isMe
@@ -66,16 +66,17 @@ const CommentsWidget = ({comments, mainUserPicturePath, postId, name, loggedInUs
        }
 
        const notifMap = new Map();
-       const notifPackage = [postId,name,"comment",false];
+       const notifPackage = [postId,name,"comment",commentPost,false];
+       setCommentPost(""); // clears the comment textbox
        for (var x = 0; x < userIds.length; x++){
             notifMap.set(userIds[x],notifPackage);
        }
        const notifObj = Object.fromEntries(notifMap);
 
     //    console.log(JSON.stringify(userIds));
-       console.log(JSON.stringify(notifObj));
+    //    console.log(JSON.stringify(notifObj));
 
-       const notifyUsers = await fetch(`http://localhost:3001/users/notifyComment`, {
+       await fetch(`http://localhost:3001/users/notifyComment`, {
             method: "POST",
             headers: { Authorization: `Bearer ${token}`,
                         "Content-Type": "application/json"},
@@ -83,6 +84,7 @@ const CommentsWidget = ({comments, mainUserPicturePath, postId, name, loggedInUs
                                     
         })
 
+        
 
 
        

@@ -88,3 +88,23 @@ export const notifyUsersComment = async (req, res) => {
 
 
 }
+
+export const notifyUsersLike = async (req, res) => {
+    try {
+
+        // console.log(Object.keys(req.body)[0]);
+        // console.log(Object.keys(req.body));
+        const userId = Object.keys(req.body)[0];
+        
+        var user = await User.findById(userId);
+        user.notifications.push(Object.values(req.body)[0]);
+            
+        await user.save();
+        
+
+    } catch (error){ 
+        res.status(404).json({message: error.message});
+    }
+
+
+}
