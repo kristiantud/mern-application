@@ -60,7 +60,7 @@ const PostWidget = ({
         // console.log(updatedPost);
         dispatch(setPost({ post: updatedPost }));
 
-        const notifPackage = [postId,name,"like",false];
+        const notifPackage = [postId,loggedInUserName,"like",false];
         const notifMap = new Map();
         notifMap.set(postUserId, notifPackage);
         const notifObj = Object.fromEntries(notifMap);

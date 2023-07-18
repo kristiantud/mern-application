@@ -1,8 +1,11 @@
 import { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
-import { Box } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import Navbar from "scenes/navbar";
-import NotifsWidget from "scenes/widgets/NotifsWidget";
+import WidgetWrapper from "components/WidgetWrapper";
+import ThumbUpIcon from '@mui/icons-material/ThumbUp';
+import TextsmsOutlinedIcon from '@mui/icons-material/TextsmsOutlined';
+import FlexBetween from "components/FlexBetween";
 
 
 // this will fetch all of the notifications that the user gets from interactions with other people
@@ -42,17 +45,34 @@ const Notifications = ({}) => {
     return (
         <>
             <Navbar />
-            <Box>
+            <Box m="3rem 30rem">
+                
                 { dataReturned ? (
-                    notifications.map(
-                        (notification) => (                        
-                            <h3>{notification}</h3>
+                    notifications.toReversed().map(
+                        (notification) => (                  
+                            <WidgetWrapper m="1.3rem 0">
+                                <FlexBetween>
+                                    <Box>
+                                        {notification[2] = "comment" ? (<TextsmsOutlinedIcon />) : (<ThumbUpIcon />)}
+                                    </Box>
+                                    <Box>
+                                        <Typography>
+                                            <b>{notification[1]}</b> {notification[2] = "comment" ? (" commented on a post.") : (" liked your post.")} 
+                                        </Typography>
+                                        <Typography>
+                                            "{notification[3]}"
+                                        </Typography>
+                                    </Box>
+                                </FlexBetween>
+                            </WidgetWrapper>
                         )
                     )
                 ) : (
                     <h3>data is loading...</h3>
                 )}
             </Box>
+
+            
         </>
     )
     
