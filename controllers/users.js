@@ -108,3 +108,17 @@ export const notifyUsersLike = async (req, res) => {
 
 
 }
+
+export const getNotifications = async (req,res) => {
+    try{
+        const { id } = req.params;
+        var user = await User.findById(id);
+        // console.log(user.notifications);
+        res.status(200).json(user.notifications);
+    } catch (error){
+        res.status(404).json({ message: error.message })
+    }
+    
+
+
+}

@@ -4,7 +4,8 @@ import {
     getUserFriends,
     addRemoveFriend,
     notifyUsersComment,
-    notifyUsersLike
+    notifyUsersLike,
+    getNotifications
     
  } from "../controllers/users.js";
 import { verifyToken } from "../middleware/auth.js";
@@ -15,6 +16,7 @@ const router = express.Router();
 // not updating anything (CUD), just R
 router.get("/:id", verifyToken, getUser);
 router.get("/:id/friends", verifyToken, getUserFriends);
+router.get("/:id/notifications", verifyToken, getNotifications);
 
 
 // UPDATE
