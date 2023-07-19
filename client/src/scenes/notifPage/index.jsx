@@ -45,23 +45,28 @@ const Notifications = ({}) => {
     return (
         <>
             <Navbar />
-            <Box m="3rem 30rem">
+            <Box m="1.5rem 25rem">
                 
                 { dataReturned ? (
                     notifications.toReversed().map(
                         (notification) => (                  
-                            <WidgetWrapper m="1.3rem 0">
-                                <FlexBetween>
+                            <WidgetWrapper m="1.1rem 0">
+                                <FlexBetween style={{justifyContent: "center"}}>
                                     <Box>
-                                        {notification[2] = "comment" ? (<TextsmsOutlinedIcon />) : (<ThumbUpIcon />)}
+                                        {notification[2] === "comment" ? (<TextsmsOutlinedIcon fontSize="large" />) : (<ThumbUpIcon fontSize="large" />)}
                                     </Box>
-                                    <Box>
+                                    <Box ml="1rem">
                                         <Typography>
-                                            <b>{notification[1]}</b> {notification[2] = "comment" ? (" commented on a post.") : (" liked your post.")} 
+                                            {/* {console.log(notification[2] + " so...." )} */}
+                                            {console.log(notification[3])}
+                                            <b>{notification[1]}</b> {notification[2] == "comment" ? (" commented on a post.") : (" liked your post.")} 
                                         </Typography>
-                                        <Typography>
-                                            "{notification[3]}"
-                                        </Typography>
+
+                                        {notification[2] !== "like" && 
+                                            (<Typography align="center" fontStyle="italic" sx={{color:"gray"}}>
+                                                "{notification[3]}"
+                                            </Typography>)
+                                        }                   
                                     </Box>
                                 </FlexBetween>
                             </WidgetWrapper>
