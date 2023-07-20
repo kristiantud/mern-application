@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, Divider, Grid } from "@mui/material";
 import Navbar from "scenes/navbar";
 import WidgetWrapper from "components/WidgetWrapper";
 import ThumbUpIcon from '@mui/icons-material/ThumbUp';
@@ -45,36 +45,48 @@ const Notifications = ({}) => {
     return (
         <>
             <Navbar />
-            <Box m="1.5rem 25rem">
-                
-                { dataReturned ? (
-                    notifications.toReversed().map(
-                        (notification) => (                  
-                            <WidgetWrapper m="1.1rem 0">
-                                <FlexBetween style={{justifyContent: "center"}}>
-                                    <Box>
-                                        {notification[2] === "comment" ? (<TextsmsOutlinedIcon fontSize="large" />) : (<ThumbUpIcon fontSize="large" />)}
-                                    </Box>
-                                    <Box ml="1rem">
-                                        <Typography>
-                                            {/* {console.log(notification[2] + " so...." )} */}
-                                            {console.log(notification[3])}
-                                            <b>{notification[1]}</b> {notification[2] == "comment" ? (" commented on a post.") : (" liked your post.")} 
-                                        </Typography>
-
-                                        {notification[2] !== "like" && 
-                                            (<Typography align="center" fontStyle="italic" sx={{color:"gray"}}>
-                                                "{notification[3]}"
-                                            </Typography>)
-                                        }                   
-                                    </Box>
-                                </FlexBetween>
-                            </WidgetWrapper>
+            <Box m="1.5rem 28rem">
+                <WidgetWrapper m="1.1rem 0">
+                    { dataReturned ? (
+                        notifications.toReversed().map(
+                            (notification) => (   
+                            
+                                <>
+                                    <Grid container mb="1.5rem" >
+                                        
+                                        <Grid item xs={4} sx={{paddingLeft: "9.5rem"}}>
+                                            {notification[2] === "comment" ? (<TextsmsOutlinedIcon sx={{marginTop: "5px"}} fontSize="large" />) : (<ThumbUpIcon fontSize="large" />)}
+                                        </Grid>
+                                        <Grid item xs={7.5} sx={{marginTop: "5px"}}>
+                                            <Typography>
+                                                {/* {console.log(notification[2] + " so...." )} */}
+                                                {console.log(notification[3])}
+                                                <b>{notification[1]}</b> {notification[2] === "comment" ? (" commented on a post.") : (" liked your post.")} 
+                                            </Typography>
+                                            {/* {notification[2] !== "like" && 
+                                                (<Typography align="center" fontStyle="italic" sx={{color:"gray"}}>
+                                                    "{notification[3]}"
+                                                </Typography>)
+                                            } */}
+                                                
+                                        </Grid>
+                                    </Grid>
+                                        
+                                </>
+                                   
+                                        
+                                        
+                                 
+                                
+                                            
+                                    
+                                
+                            )
                         )
-                    )
-                ) : (
-                    <h3>data is loading...</h3>
-                )}
+                    ) : (
+                        <h3>data is loading...</h3>
+                    )}
+                </WidgetWrapper>
             </Box>
 
             
