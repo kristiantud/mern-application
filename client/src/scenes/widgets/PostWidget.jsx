@@ -66,16 +66,19 @@ const PostWidget = ({
         const notifObj = Object.fromEntries(notifMap);
 
         // notify the user who posted of the like
-        if (!isLiked){
-            await fetch (`http://localhost:3001/users/notifyLike`, {
-                method: "POST",
-                headers: {
-                    Authorization: `Bearer ${token}`,
-                    "Content-Type": "application/json"
-                },
-                body: JSON.stringify(notifObj)
-            })
+        if (postUserId !== loggedInUserId){
+            if (!isLiked && (postUserId !== loggedInUserId)){
+                await fetch (`http://localhost:3001/users/notifyLike`, {
+                    method: "POST",
+                    headers: {
+                        Authorization: `Bearer ${token}`,
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify(notifObj)
+                })
+            }
         }
+        
         
     }
 

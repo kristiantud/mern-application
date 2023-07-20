@@ -54,10 +54,10 @@ const Notifications = ({}) => {
                                 <>
                                     <Grid container mb="1.5rem" >
                                         
-                                        <Grid item xs={4} sx={{paddingLeft: "9.5rem"}}>
+                                        <Grid item xs={4}>
                                             {notification[2] === "comment" ? (<TextsmsOutlinedIcon sx={{marginTop: "5px"}} fontSize="large" />) : (<ThumbUpIcon fontSize="large" />)}
                                         </Grid>
-                                        <Grid item xs={7.5} sx={{marginTop: "5px"}}>
+                                        <Grid item xs={8} sx={{marginTop: "5px"}}>
                                             <Typography>
                                                 {/* {console.log(notification[2] + " so...." )} */}
                                                 {console.log(notification[3])}
