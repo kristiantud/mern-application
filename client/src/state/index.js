@@ -1,4 +1,4 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createSlice, current } from "@reduxjs/toolkit";
 
 const initialState = {
     mode: "light",
@@ -44,7 +44,8 @@ export const authSlice = createSlice({
                 return post;
             });
             state.posts = updatedPosts;
-        }
+        },
+        
     }
 })
 

@@ -60,7 +60,7 @@ const Notifications = ({}) => {
                                         <Grid item xs={8} sx={{marginTop: "5px"}}>
                                             <Typography>
                                                 {/* {console.log(notification[2] + " so...." )} */}
-                                                {console.log(notification[3])}
+                                                {/* {console.log(notification[3])} */}
                                                 <b>{notification[1]}</b> {notification[2] === "comment" ? (" commented on a post.") : (" liked your post.")} 
                                             </Typography>
                                             {/* {notification[2] !== "like" && 

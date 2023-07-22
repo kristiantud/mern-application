@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Box,
          IconButton,
          InputBase,
@@ -27,6 +27,12 @@ import FlexBetween from "components/FlexBetween";
 
 
 const Navbar = () => {
+
+    const token = useSelector((state) => state.token);
+    const { _id } = useSelector((state) => state.user);
+    let [notifications, setNotifications] = useState(null);
+    let [ dataReturned, setDataReturned ] = useState(false); 
+    let [ isUnread, setIsUnread ] = useState(true);
     const [isMobileMenuToggled, setIsMobileMenuToggled] = useState(false);
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -41,7 +47,34 @@ const Navbar = () => {
     const primaryLight = theme.palette.primary.light;
     const alt = theme.palette.background.alt;
 
+
     const fullName = `${user.firstName} ${user.lastName}`;
+
+
+    // navbar will be in charge of fetching for notifications to see if there are any new ones
+    const getNotifs = async () => {
+        const response = await fetch (`http://localhost:3001/users/${_id}/notifications`,{
+            method: "GET",
+            headers: { Authorization: `Bearer ${token}`}
+        })
+
+        const data = await response.json();
+        
+        setNotifications(data);
+        setDataReturned(true);
+
+        // go over notifications and set isUnread to false if we find a notification with false
+
+        
+        // const data = await response.json();
+        // setNotifications(data);  
+    }
+
+    
+
+    useEffect(() => {
+        getNotifs();
+    }, [])
 
 
 
