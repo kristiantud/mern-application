@@ -136,7 +136,7 @@ const Navbar = () => {
                     <Notifications onClick={() => navigate("/notifications")} sx={{color: dark, fontSize: "25px"}} />
                 </IconButton>
             ) : (
-                <IconButton>
+                <IconButton sx={{backgroundColor: "rgba(255, 0, 0, 0.5)"}}>
                     <NotificationImportantIcon onClick={() => navigate("/notifications")} sx={{color: dark, fontSize: "25px"}} />
                 </IconButton>
             ))}
