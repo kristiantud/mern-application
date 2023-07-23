@@ -18,7 +18,8 @@ import {
     Help,
     Menu,
     Close
-} from "@mui/icons-material"
+} from "@mui/icons-material";
+import NotificationImportantIcon from '@mui/icons-material/NotificationImportant';
 import { useDispatch, useSelector } from "react-redux"
 import { setMode, setLogout } from "state"
 import { useNavigate } from "react-router-dom"
@@ -32,7 +33,7 @@ const Navbar = () => {
     const { _id } = useSelector((state) => state.user);
     let [notifications, setNotifications] = useState(null);
     let [ dataReturned, setDataReturned ] = useState(false); 
-    let [ isUnread, setIsUnread ] = useState(true);
+    let [ isUnread, setIsUnread ] = useState(false);
     const [isMobileMenuToggled, setIsMobileMenuToggled] = useState(false);
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -61,10 +62,17 @@ const Navbar = () => {
         const data = await response.json();
         
         setNotifications(data);
-        setDataReturned(true);
+        
 
         // go over notifications and set isUnread to false if we find a notification with false
-
+        for (var x = 0; x < notifications.length; x++){
+            console.log(notifications[x]);
+            if (notifications[4] === false) {
+                setIsUnread(true);
+                break;
+            }
+        }
+        setDataReturned(true);
         
         // const data = await response.json();
         // setNotifications(data);  
@@ -115,9 +123,18 @@ const Navbar = () => {
                 )}
             </IconButton>
             <Message sx={{color: dark, fontSize: "25px"}}></Message>
-            <IconButton>
+            { dataReturned && (isUnread === true ? (
+                <IconButton>
+                    <Notifications onClick={() => navigate("/notifications")} sx={{color: dark, fontSize: "25px"}} />
+                </IconButton>
+            ) : (
+                <IconButton>
+                    <NotificationImportantIcon onClick={() => navigate("/notifications")} sx={{color: dark, fontSize: "25px"}} />
+                </IconButton>
+            ))}
+            {/* <IconButton>
                 <Notifications onClick={() => navigate("/notifications")} sx={{color: dark, fontSize: "25px"}} />
-            </IconButton>
+            </IconButton> */}
             <Help sx={{color: dark, fontSize: "25px"}}></Help>   
             <FormControl variant="standard" value={fullName}>
                 <Select value={fullName}
