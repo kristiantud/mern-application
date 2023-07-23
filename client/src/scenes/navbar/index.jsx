@@ -31,9 +31,9 @@ const Navbar = () => {
 
     const token = useSelector((state) => state.token);
     const { _id } = useSelector((state) => state.user);
-    let [notifications, setNotifications] = useState(null);
+    // let [notifications, setNotifications] = useState(null);
     let [ dataReturned, setDataReturned ] = useState(false); 
-    let [ isUnread, setIsUnread ] = useState(false);
+    let [ isRead, setIsRead ] = useState(true);
     const [isMobileMenuToggled, setIsMobileMenuToggled] = useState(false);
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -60,19 +60,26 @@ const Navbar = () => {
         })
 
         const data = await response.json();
-        
-        setNotifications(data);
-        
+        // console.log(data);
+        setDataReturned(true);
 
-        // go over notifications and set isUnread to false if we find a notification with false
-        for (var x = 0; x < notifications.length; x++){
-            console.log(notifications[x]);
-            if (notifications[4] === false) {
-                setIsUnread(true);
+        for (var x = 0; x < data.length; x++){
+            console.log(data[x][3])
+            if (data[x][3] === false) {
+                setIsRead(false);
                 break;
             }
         }
-        setDataReturned(true);
+        
+        
+        
+
+        // go over notifications and set isUnread to false if we find a notification with false
+        // if (dataReturned){
+        //     console.log("notifs: " + notifications);    
+        // } else {
+        //     console.log("no data returned.");
+        // }
         
         // const data = await response.json();
         // setNotifications(data);  
@@ -82,6 +89,7 @@ const Navbar = () => {
 
     useEffect(() => {
         getNotifs();
+        
     }, [])
 
 
@@ -123,7 +131,7 @@ const Navbar = () => {
                 )}
             </IconButton>
             <Message sx={{color: dark, fontSize: "25px"}}></Message>
-            { dataReturned && (isUnread === true ? (
+            {(isRead === true ? (
                 <IconButton>
                     <Notifications onClick={() => navigate("/notifications")} sx={{color: dark, fontSize: "25px"}} />
                 </IconButton>

@@ -66,7 +66,7 @@ const CommentsWidget = ({comments, mainUserPicturePath, postId, name, loggedInUs
        }
 
        const notifMap = new Map();
-       const notifPackage = [postId,name,"comment",commentPost,false];
+       const notifPackage = [postId,name,"comment",false,commentPost];
        setCommentPost(""); // clears the comment textbox
        for (var x = 0; x < userIds.length; x++){
             notifMap.set(userIds[x],notifPackage);

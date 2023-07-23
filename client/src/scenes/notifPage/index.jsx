@@ -25,8 +25,8 @@ const Notifications = ({}) => {
 
         const data = await response.json();
         setNotifications(data);
-        
         setDataReturned(true);
+    
 
         
         // const data = await response.json();
