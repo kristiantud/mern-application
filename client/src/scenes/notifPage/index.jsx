@@ -33,10 +33,20 @@ const Notifications = ({}) => {
         // setNotifications(data);  
     }
 
+    const notificationsSeen = async () => {
+        const response = await fetch (`http://localhost:3001/users/${_id}/notifications`,{
+            method: "POST",
+            headers: { Authorization: `Bearer ${token}`}
+        })
+
+        console.log("done");
+    }
+
         
     
     useEffect(() => {
         getNotifs();
+        notificationsSeen();
     }, [])
     
 
@@ -86,6 +96,7 @@ const Notifications = ({}) => {
                     ) : (
                         <h3>data is loading...</h3>
                     )}
+                    
                 </WidgetWrapper>
             </Box>
 

@@ -120,5 +120,31 @@ export const getNotifications = async (req,res) => {
     }
     
 
+}
+
+
+// this will be called when user navigates to notification screen
+export const changeToSeen = async (req,res) => {
+    try {
+        const { id } = req.params;
+        var user = await User.findById(id);
+
+        for (var x = 0; x < user.notifications.length; x++){
+            // console.log("isRead: " + user.notifications[x][3]);
+            if (user.notifications[x][3] === false){
+                console.log("changing...");
+                user.notifications[x][3] = true;
+            }
+        }
+        
+        // console.log(user.notifications);
+        user.markModified('notifications');
+        await user.save();
+
+    }catch (error) {
+        res.status(404).json({message: error.message });
+    }
+
+
 
 }
