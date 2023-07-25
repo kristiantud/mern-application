@@ -117,3 +117,19 @@ export const likePosts = async (req,res) => {
     }
 }
 
+// GET POST BY ID
+export const getPostById = async (req,res) => {
+    try {
+        const { postId } = req.params;
+        const post = await Post.findById(postId);
+        if (post) {
+            res.status(200).json(post);
+        }
+    } catch (error) {
+        res.status(404).json({message: error.message});
+    }
+
+
+
+}
+
