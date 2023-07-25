@@ -15,6 +15,7 @@ const Post = ({}) => {
     const token = useSelector((state) => state.token);
     let [dataReceived, setDataReceived] = useState(false);
     const [ post, setPost ] = useState({});
+    const {picturePath} = useSelector((state) => state.user)
 
 
     // console.log(postId);
@@ -60,7 +61,7 @@ const Post = ({}) => {
                     userPicturePath={post.userPicturePath}
                     likes={post.likes}
                     comments={post.comments}
-                    mainUserPicturePath={post.mainUserPicturePath}
+                    mainUserPicturePath={picturePath}
                 />}
             </Box>
         </>

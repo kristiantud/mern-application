@@ -13,6 +13,7 @@ import { setPost } from "state";
 import CommentsWidget from "./CommentsWidget";
 import UserImage from "components/UserImage";
 import { addData, getData } from "../../state/notifData";
+import { useNavigate } from "react-router-dom";
 
 
 
@@ -38,6 +39,7 @@ const PostWidget = ({
     const isLiked = Boolean(likes[loggedInUserId]);
     const likeCount = Object.keys(likes).length;
     const allComments = Object.entries(comments);
+    const navigate = useNavigate();
     // console.log(allComments);
     // console.log(name + " " + picturePath + " " + userPicturePath);
 
@@ -84,7 +86,7 @@ const PostWidget = ({
 
    
     return (
-        <WidgetWrapper m="2rem 0">
+        <WidgetWrapper m="2rem 0" sx={{"&:hover" : {backgroundColor: palette.neutral.light,cursor: "pointer"}}} onClick={() => navigate(`/post/${postId}`)}>
             <Friend 
                 friendId={postUserId}
                 name={name}
