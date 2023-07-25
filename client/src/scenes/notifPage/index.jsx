@@ -39,7 +39,7 @@ const Notifications = ({}) => {
             headers: { Authorization: `Bearer ${token}`}
         })
 
-        console.log("done");
+        // console.log("done");
     }
 
         
@@ -55,19 +55,17 @@ const Notifications = ({}) => {
     return (
         <>
             <Navbar />
-            <Box m="1.5rem 28rem">
+            <Box width="500px" m="auto" mt="30px">
                 <WidgetWrapper m="1.1rem 0">
                     { dataReturned ? (
                         notifications.toReversed().map(
                             (notification) => (   
-                            
                                 <>
                                     <Grid container mb="1.5rem" >
-                                        
-                                        <Grid item xs={4}>
+                                        <Grid item xs={2} ml="10px">
                                             {notification[2] === "comment" ? (<TextsmsOutlinedIcon sx={{marginTop: "5px"}} fontSize="large" />) : (<ThumbUpIcon fontSize="large" />)}
                                         </Grid>
-                                        <Grid item xs={8} sx={{marginTop: "5px"}}>
+                                        <Grid item xs={9} sx={{marginTop: "5px"}}>
                                             <Typography>
                                                 {/* {console.log(notification[2] + " so...." )} */}
                                                 {/* {console.log(notification[3])} */}

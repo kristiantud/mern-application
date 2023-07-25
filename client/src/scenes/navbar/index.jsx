@@ -64,7 +64,7 @@ const Navbar = () => {
         setDataReturned(true);
 
         for (var x = 0; x < data.length; x++){
-            console.log(data[x][3])
+            // console.log(data[x][3])
             if (data[x][3] === false) {
                 setIsRead(false);
                 break;
