@@ -14,6 +14,8 @@ import CommentsWidget from "./CommentsWidget";
 import UserImage from "components/UserImage";
 import { addData, getData } from "../../state/notifData";
 import { useNavigate } from "react-router-dom";
+import { render } from "react-dom";
+import { useEffect } from "react";
 
 
 
@@ -28,7 +30,8 @@ const PostWidget = ({
     userPicturePath,
     likes,
     comments,
-    mainUserPicturePath
+    mainUserPicturePath,
+    isPostPage = false
 }) => {
 
     const [isComments, setIsComments] = useState(true);
@@ -47,6 +50,7 @@ const PostWidget = ({
     const { palette } = useTheme();
     const primary = palette.primary.main;
     const main = palette.neutral.main;
+    
 
 
     const patchLike = async () => {
@@ -60,7 +64,13 @@ const PostWidget = ({
         });
         const updatedPost = await response.json();
         // console.log(updatedPost);
+        
         dispatch(setPost({ post: updatedPost }));
+        navigate(`/post/${postId}`);
+        navigate(0);
+       
+
+        
 
         const notifPackage = [postId,loggedInUserName,"like",false];
         const notifMap = new Map();
@@ -84,9 +94,9 @@ const PostWidget = ({
         
     }
 
-   
     return (
-        <WidgetWrapper m="2rem 0" sx={{"&:hover" : {backgroundColor: palette.neutral.light,cursor: "pointer"}}} onClick={() => navigate(`/post/${postId}`)}>
+        // <WidgetWrapper m="2rem 0" sx={{"&:hover" : {backgroundColor: palette.neutral.light,cursor: "pointer"}}} onClick={() => navigate(`/post/${postId}`)}>
+        <WidgetWrapper m="2rem 0">
             <Friend 
                 friendId={postUserId}
                 name={name}

@@ -77,6 +77,7 @@ const Post = ({}) => {
                         likes={post.likes}
                         comments={post.comments}
                         mainUserPicturePath={picturePath}
+                        isPostPage={true}
                     />}
                 </Box>
             ) : (
