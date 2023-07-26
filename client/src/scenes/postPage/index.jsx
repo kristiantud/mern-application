@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { Box } from "@mui/material";
 import PostWidget from "scenes/widgets/PostWidget";
-
+import WidgetWrapper from "components/WidgetWrapper";
 
 
 
@@ -16,6 +16,11 @@ const Post = ({}) => {
     let [dataReceived, setDataReceived] = useState(false);
     const [ post, setPost ] = useState({});
     const {picturePath} = useSelector((state) => state.user)
+    const [isFriend, setIsFriend] = useState(false);
+    const { friends } = useSelector((state) => state.user);
+    const { _id } = useSelector((state) => state.user);
+    
+
 
 
     // console.log(postId);
@@ -31,11 +36,20 @@ const Post = ({}) => {
         // console.log(data);
         if (data) {
             setDataReceived(true);
-            console.log("Received")
+            // console.log("Received")
             setPost(data);
         }
+        // console.log(data.userId + " " + _id);
 
-        console.log(data);
+        // console.log(data);
+        for (var x = 0; x < friends.length; x++){
+            // console.log(friends[x]._id)
+            if (friends[x]._id === data.userId || data.userId === _id){
+                setIsFriend(true);
+            }
+        }
+        
+
     }
 
     useEffect(() => {
@@ -47,23 +61,32 @@ const Post = ({}) => {
     return (
         
         <>
+        
             <Navbar />
-            <Box width="600px" m="auto">
-                
-                {dataReceived && <PostWidget 
-                    key={post._id}
-                    postId={post._id}
-                    postUserId={post.userId}
-                    name={`${post.firstName} ${post.lastName}`}
-                    description={post.description}
-                    location={post.location}
-                    picturePath={post.picturePath}
-                    userPicturePath={post.userPicturePath}
-                    likes={post.likes}
-                    comments={post.comments}
-                    mainUserPicturePath={picturePath}
-                />}
-            </Box>
+            {isFriend ? (
+                <Box width="600px" m="auto">
+                    {dataReceived && <PostWidget 
+                        key={post._id}
+                        postId={post._id}
+                        postUserId={post.userId}
+                        name={`${post.firstName} ${post.lastName}`}
+                        description={post.description}
+                        location={post.location}
+                        picturePath={post.picturePath}
+                        userPicturePath={post.userPicturePath}
+                        likes={post.likes}
+                        comments={post.comments}
+                        mainUserPicturePath={picturePath}
+                    />}
+                </Box>
+            ) : (
+                <Box>
+                    <WidgetWrapper width="600px" m="auto" mt="30px" sx={{paddingTop: "1.5rem", textAlign: "center"}}>
+                        <h4>You must be friends with user to access this post.</h4>
+                    </WidgetWrapper>
+                </Box>
+            )}
+            
         </>
         
         
