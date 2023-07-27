@@ -26,3 +26,8 @@ html, body, #root, .app{
 ::-webkit-scrollbar-thumb:hover {
   background: #555; 
 }
+
+.msg-preview:hover {
+  cursor: pointer;
+  background-color: #353535;
+}
