@@ -33,7 +33,7 @@ const Navbar = () => {
     const { _id } = useSelector((state) => state.user);
     // let [notifications, setNotifications] = useState(null);
     let [ dataReturned, setDataReturned ] = useState(false); 
-    let [ isRead, setIsRead ] = useState(true);
+    let [ notifsIsRead, setNotifsIsRead ] = useState(true);
     const [isMobileMenuToggled, setIsMobileMenuToggled] = useState(false);
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -66,7 +66,7 @@ const Navbar = () => {
         for (var x = 0; x < data.length; x++){
             // console.log(data[x][3])
             if (data[x][3] === false) {
-                setIsRead(false);
+                setNotifsIsRead(false);
                 break;
             }
         }
@@ -130,8 +130,11 @@ const Navbar = () => {
                     <LightMode sx={{color: dark, fontSize: "25px"}}></LightMode>
                 )}
             </IconButton>
-            <Message sx={{color: dark, fontSize: "25px"}}></Message>
-            {(isRead === true ? (
+            <IconButton>
+                <Message sx={{color: dark, fontSize: "25px"}} onClick={() => navigate("/messages")}></Message>
+            </IconButton>
+            
+            {(notifsIsRead === true ? (
                 <IconButton>
                     <Notifications onClick={() => navigate("/notifications")} sx={{color: dark, fontSize: "25px"}} />
                 </IconButton>

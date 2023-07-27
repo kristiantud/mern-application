@@ -3,6 +3,7 @@ import HomePage from "scenes/homePage";
 import LoginPage from "scenes/loginPage";
 import ProfilePage from "scenes/profilePage";
 import Notifications from "scenes/notifPage";
+import Messages from "scenes/messagePage"
 import { useMemo } from "react";
 import { useSelector } from "react-redux";
 import { CssBaseline, ThemeProvider } from "@mui/material";
@@ -26,6 +27,7 @@ function App() {
         <Route path="/profile/:userId" element={isAuth ? <ProfilePage /> : <Navigate to="/"/> } />
         <Route path="/notifications" element={isAuth ? <Notifications /> : <LoginPage/> } />
         <Route path="/post/:postId" element={isAuth ? <Post /> : <LoginPage /> } />
+        <Route path="/messages" element={isAuth ? <Messages /> : <LoginPage />} />
       </Routes>
     </ThemeProvider>
    </BrowserRouter>
