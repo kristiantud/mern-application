@@ -3,9 +3,9 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
 
-const MsgPreviews = ({}) => {
+const MsgPreviews = ({selected, id = ''}) => {
 
-    const [selected, setSelected] = useState(false);
+
 
     const navigate = useNavigate();
 
@@ -16,18 +16,16 @@ const MsgPreviews = ({}) => {
         <>
             {selected ? (
                 <>
-                    <div style={{padding: "30px 15px", backgroundColor:"#404040"}} class="msg-preview">
+                    <div style={{padding: "30px 15px", backgroundColor: "#404040"}} class="msg-preview" >
                         <Typography mb="5px" fontWeight={"bold"}>Robert Oppenheimer</Typography>
                         <Typography>Now I have become death, the destroyer of worlds...</Typography>
                     
                     </div>
                     <Divider />
-
                 </>
-                
             ) : (
                 <>
-                    <div style={{padding: "30px 15px"}} class="msg-preview" onClick={() => setSelected(true)}>
+                    <div style={{padding: "30px 15px"}} class="msg-preview">
                         <Typography mb="5px" fontWeight={"bold"}>Robert Oppenheimer</Typography>
                         <Typography>Now I have become death, the destroyer of worlds...</Typography>
                     

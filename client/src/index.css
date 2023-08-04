@@ -31,3 +31,7 @@ html, body, #root, .app{
   cursor: pointer;
   background-color: #353535;
 }
+
+.msg-preview.active {
+  background-color: #404040;
+}
