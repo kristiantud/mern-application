@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 
 
-const MsgPreviews = ({selected, id = ''}) => {
+const MsgPreviews = ({selected, id = -1}) => {
 
 
 
@@ -17,7 +17,8 @@ const MsgPreviews = ({selected, id = ''}) => {
 
     return(
         <>
-            {selected ? (
+            
+            {selected === id ? (
                 <>
                     <div style={{padding: "30px 15px", backgroundColor: "#404040"}} class="msg-preview" onClick={() => {console.log("clicked id: " + id)}}>
                         <Typography mb="5px" fontWeight={"bold"}>Robert Oppenheimer</Typography>
