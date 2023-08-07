@@ -16,9 +16,9 @@ const MsgPreviewWidget = ({}) => {
     return (
         <>
             {msgs.map((msgIndex) => (
-                selected === msgIndex ? (<MsgPreviews selected={true} id={msgIndex} onClick={() => this.msgSelected(msgIndex)} />
+                selected === msgIndex ? (<MsgPreviews selected={true} id={msgIndex} />
                 ) : (
-                <MsgPreviews selected={false} id={msgIndex} onClick={() => this.msgSelected(msgIndex)} />)
+                <MsgPreviews selected={false} id={msgIndex} />)
                 
             ))}
             
