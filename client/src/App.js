@@ -28,6 +28,7 @@ function App() {
         <Route path="/notifications" element={isAuth ? <Notifications /> : <LoginPage/> } />
         <Route path="/post/:postId" element={isAuth ? <Post /> : <LoginPage /> } />
         <Route path="/messages" element={isAuth ? <Messages /> : <LoginPage />} />
+        <Route path="/messages/:messageId" element={isAuth ? <Messages /> : <LoginPage />} />
       </Routes>
     </ThemeProvider>
    </BrowserRouter>
