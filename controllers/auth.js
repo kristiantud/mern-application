@@ -32,7 +32,21 @@ export const register = async (req,res) => {
             occupation,
             viewedProfile: Math.floor(Math.random() * 10000),
             impressions: Math.floor(Math.random() * 10000),
-            notifications: [["randompostid","comment","name"]]
+            notifications: [["randompostid","comment","name"]],
+            inbox: [
+                {
+                    id: "1",
+                    messages: [
+                      {id: "69",
+                      sender: "somerandomuseridbythesender",
+                      content: "Hello brother!"},
+                      {id: "70",
+                      sender: "somerandomuseridbythesender",
+                      content: "How you been???"},
+                      
+                    ]
+                  },
+            ]
         });
         
         const savedUser = await newUser.save();

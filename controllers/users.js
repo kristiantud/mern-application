@@ -153,9 +153,18 @@ export const getUserMessageById = async (req,res) => {
     try {
         const { id } = req.params;
         const { messageId } = req.params;
+        console.log(messageId);
         var user = await User.findById(id);
-        var messageToSend = user.inbox.get(messageId);
-        res.status(200).json(messageToSend.messages);
+        let messages = [];
+        for (let x = 0; x < user.inbox.length; x++) {
+            if (user.inbox[x].id === messageId) {
+                messages = user.inbox[x].messages;
+            } 
+        }
+        console.log(messages);
+        
+        
+        res.status(200).json(messages);
 
     } catch(error) { 
         res.status(404).json({message: error.message});

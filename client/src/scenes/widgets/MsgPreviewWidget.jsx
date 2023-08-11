@@ -20,13 +20,17 @@ const MsgPreviewWidget = ({}) => {
     if (messageId !== undefined){
         // fetch the message content from the server
         const getMessage = async () => {
-            const response = await fetch(`http://localhost:3001/${_id}/messages/${messageId}`, {
+            const response = await fetch(`http://localhost:3001/users/${_id}/messages/${messageId}`, {
                 method: "GET", 
                 headers: {
                     Authorization: `Bearer ${token}`
 
                 }
             })
+
+            const data = await response.json();
+
+            console.log(data);
         }
 
         getMessage();
