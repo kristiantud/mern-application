@@ -148,3 +148,16 @@ export const changeToSeen = async (req,res) => {
 
 
 }
+
+export const getUserMessageById = async (req,res) => {
+    try {
+        const { id } = req.params;
+        const { messageId } = req.params;
+        var user = await User.findById(id);
+        var messageToSend = user.inbox.get(messageId);
+        res.status(200).json(messageToSend.messages);
+
+    } catch(error) { 
+        res.status(404).json({message: error.message});
+    }
+}

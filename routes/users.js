@@ -6,7 +6,8 @@ import {
     notifyUsersComment,
     notifyUsersLike,
     getNotifications,
-    changeToSeen
+    changeToSeen,
+    getUserMessageById
     
  } from "../controllers/users.js";
 import { verifyToken } from "../middleware/auth.js";
@@ -18,6 +19,7 @@ const router = express.Router();
 router.get("/:id", verifyToken, getUser);
 router.get("/:id/friends", verifyToken, getUserFriends);
 router.get("/:id/notifications", verifyToken, getNotifications);
+router.get("/:id/messages/:messageId", verifyToken, getUserMessageById)
 
 
 // UPDATE

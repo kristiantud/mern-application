@@ -24,6 +24,21 @@ export const users = [
     occupation: "Software Engineer",
     viewedProfile: 14561,
     impressions: 888822,
+    inbox: [
+      {
+        id: "1",
+        messages: [
+          {id: "69",
+          sender: "somerandomuseridbythesender",
+          content: "Hello brother!"},
+          {id: "70",
+          sender: "somerandomuseridbythesender",
+          content: "How you been???"},
+          
+        ]
+      },
+      
+    ],
     notifications: [
       ["randomPostId", "comment", "randomName", false]
     ],
@@ -43,6 +58,21 @@ export const users = [
     occupation: "Degenerate",
     viewedProfile: 12351,
     impressions: 55555,
+    inbox: [
+      {
+        id: "1",
+        messages: [
+          {id: "69",
+          sender: "somerandomuseridbythesender",
+          content: "Hello brother!"},
+          {id: "70",
+          sender: "somerandomuseridbythesender",
+          content: "How you been???"},
+          
+        ]
+      },
+      
+    ],
     notifications: [
       ["randomPostId", "comment", "randomName", false]
     ],
@@ -62,6 +92,21 @@ export const users = [
     occupation: "Data Scientist Hacker",
     viewedProfile: 45468,
     impressions: 19986,
+    inbox: [
+      {
+        id: "1",
+        messages: [
+          {id: "69",
+          sender: "somerandomuseridbythesender",
+          content: "Hello brother!"},
+          {id: "70",
+          sender: "somerandomuseridbythesender",
+          content: "How you been???"},
+          
+        ]
+      },
+      
+    ],
     notifications: [
       ["randomPostId", "comment", "randomName", false]
     ],
@@ -81,6 +126,21 @@ export const users = [
     occupation: "Educator",
     viewedProfile: 41024,
     impressions: 55316,
+    inbox: [
+      {
+        id: "1",
+        messages: [
+          {id: "69",
+          sender: "somerandomuseridbythesender",
+          content: "Hello brother!"},
+          {id: "70",
+          sender: "somerandomuseridbythesender",
+          content: "How you been???"},
+          
+        ]
+      },
+      
+    ],
     notifications: [
       ["randomPostId", "comment", "randomName", false]
     ],
@@ -100,6 +160,21 @@ export const users = [
     occupation: "Hacker",
     viewedProfile: 40212,
     impressions: 7758,
+    inbox: [
+      {
+        id: "1",
+        messages: [
+          {id: "69",
+          sender: "somerandomuseridbythesender",
+          content: "Hello brother!"},
+          {id: "70",
+          sender: "somerandomuseridbythesender",
+          content: "How you been???"},
+          
+        ]
+      },
+      
+    ],
     notifications: [
       ["randomPostId", "comment", "randomName", false]
     ],
@@ -119,6 +194,21 @@ export const users = [
     occupation: "Journalist",
     viewedProfile: 976,
     impressions: 4658,
+    inbox: [
+      {
+        id: "1",
+        messages: [
+          {id: "69",
+          sender: "somerandomuseridbythesender",
+          content: "Hello brother!"},
+          {id: "70",
+          sender: "somerandomuseridbythesender",
+          content: "How you been???"},
+          
+        ]
+      },
+      
+    ],
     notifications: [
       ["randomPostId", "comment", "randomName", false]
     ],
@@ -138,6 +228,21 @@ export const users = [
     occupation: "Nurse",
     viewedProfile: 1510,
     impressions: 77579,
+    inbox: [
+      {
+        id: "1",
+        messages: [
+          {id: "69",
+          sender: "somerandomuseridbythesender",
+          content: "Hello brother!"},
+          {id: "70",
+          sender: "somerandomuseridbythesender",
+          content: "How you been???"},
+          
+        ]
+      },
+      
+    ],
     notifications: [
       ["randomPostId", "comment", "randomName", false]
     ],
@@ -157,6 +262,21 @@ export const users = [
     occupation: "A Student",
     viewedProfile: 19420,
     impressions: 82970,
+    inbox: [
+      {
+        id: "1",
+        messages: [
+          {id: "69",
+          sender: "somerandomuseridbythesender",
+          content: "Hello brother!"},
+          {id: "70",
+          sender: "somerandomuseridbythesender",
+          content: "How you been???"},
+          
+        ]
+      },
+      
+    ],
     notifications: [
       ["randomPostId", "comment", "randomName", false]
     ],
