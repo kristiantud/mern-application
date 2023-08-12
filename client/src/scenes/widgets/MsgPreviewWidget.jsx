@@ -9,8 +9,12 @@ import { useSelector } from "react-redux";
 // fetches the messages to populate the preview list
 const MsgPreviewWidget = ({}) => {
     const token = useSelector((state) => state.token);
-    const { _id } = useSelector((state) => state.user)
-    const msgs = [1,2,3,4,5,6,7]; // this will be replaced by msgs stored in the user (within the state) when the user first logs in
+    const { _id } = useSelector((state) => state.user);
+    const { inbox } = useSelector((state) => state.user);
+    
+    console.log(inbox);
+
+
     const [selectedMsg, setSelectedMsg] = useState(-1);
     const navigate = useNavigate();
     const { messageId } = useParams();
@@ -40,13 +44,10 @@ const MsgPreviewWidget = ({}) => {
 
     return (
         <>
-            {msgs.map((msgIndex) => (
-                <div onClick={() => {setSelectedMsg(msgIndex); navigate(`/messages/${msgIndex}`)}}>
-                    <MsgPreviews selected={selectedMsg} id={msgIndex}/>
-                </div>
-                
-                
-                
+            {inbox.map((msg) => (
+                <div onClick={() => {setSelectedMsg(msg.id); navigate(`/messages/${msg.id}`)}}>
+                    <MsgPreviews selected={selectedMsg} id={msg.id} senderName={"Ringo Starr"} senderMessage={msg.messages[1].content}/>
+                </div>    
             ))}
             
         

@@ -37,6 +37,78 @@ export const users = [
           
         ]
       },
+      {
+        id: "2",
+        messages: [
+          {id: "69",
+          sender: "somerandomuseridbythesender",
+          content: "Hello brother!"},
+          {id: "70",
+          sender: "somerandomuseridbythesender",
+          content: "How you been???"},
+          
+        ]
+      },
+      {
+        id: "3",
+        messages: [
+          {id: "69",
+          sender: "somerandomuseridbythesender",
+          content: "Hello brother!"},
+          {id: "70",
+          sender: "somerandomuseridbythesender",
+          content: "How you been???"},
+          
+        ]
+      },
+      {
+        id: "4",
+        messages: [
+          {id: "69",
+          sender: "somerandomuseridbythesender",
+          content: "Hello brother!"},
+          {id: "70",
+          sender: "somerandomuseridbythesender",
+          content: "How you been???"},
+          
+        ]
+      },
+      {
+        id: "5",
+        messages: [
+          {id: "69",
+          sender: "somerandomuseridbythesender",
+          content: "Hello brother!"},
+          {id: "70",
+          sender: "somerandomuseridbythesender",
+          content: "How you been???"},
+          
+        ]
+      },
+      {
+        id: "6",
+        messages: [
+          {id: "69",
+          sender: "somerandomuseridbythesender",
+          content: "Hello brother!"},
+          {id: "70",
+          sender: "somerandomuseridbythesender",
+          content: "How you been???"},
+          
+        ]
+      },
+      {
+        id: "7",
+        messages: [
+          {id: "69",
+          sender: "somerandomuseridbythesender",
+          content: "Hello brother!"},
+          {id: "70",
+          sender: "somerandomuseridbythesender",
+          content: "How you been???"},
+          
+        ]
+      },
       
     ],
     notifications: [
@@ -61,6 +133,78 @@ export const users = [
     inbox: [
       {
         id: "1",
+        messages: [
+          {id: "69",
+          sender: "somerandomuseridbythesender",
+          content: "Hello brother!"},
+          {id: "70",
+          sender: "somerandomuseridbythesender",
+          content: "How you been???"},
+          
+        ]
+      },
+      {
+        id: "2",
+        messages: [
+          {id: "69",
+          sender: "somerandomuseridbythesender",
+          content: "Hello brother!"},
+          {id: "70",
+          sender: "somerandomuseridbythesender",
+          content: "How you been???"},
+          
+        ]
+      },
+      {
+        id: "3",
+        messages: [
+          {id: "69",
+          sender: "somerandomuseridbythesender",
+          content: "Hello brother!"},
+          {id: "70",
+          sender: "somerandomuseridbythesender",
+          content: "How you been???"},
+          
+        ]
+      },
+      {
+        id: "4",
+        messages: [
+          {id: "69",
+          sender: "somerandomuseridbythesender",
+          content: "Hello brother!"},
+          {id: "70",
+          sender: "somerandomuseridbythesender",
+          content: "How you been???"},
+          
+        ]
+      },
+      {
+        id: "5",
+        messages: [
+          {id: "69",
+          sender: "somerandomuseridbythesender",
+          content: "Hello brother!"},
+          {id: "70",
+          sender: "somerandomuseridbythesender",
+          content: "How you been???"},
+          
+        ]
+      },
+      {
+        id: "6",
+        messages: [
+          {id: "69",
+          sender: "somerandomuseridbythesender",
+          content: "Hello brother!"},
+          {id: "70",
+          sender: "somerandomuseridbythesender",
+          content: "How you been???"},
+          
+        ]
+      },
+      {
+        id: "7",
         messages: [
           {id: "69",
           sender: "somerandomuseridbythesender",
@@ -105,6 +249,78 @@ export const users = [
           
         ]
       },
+      {
+        id: "2",
+        messages: [
+          {id: "69",
+          sender: "somerandomuseridbythesender",
+          content: "Hello brother!"},
+          {id: "70",
+          sender: "somerandomuseridbythesender",
+          content: "How you been???"},
+          
+        ]
+      },
+      {
+        id: "3",
+        messages: [
+          {id: "69",
+          sender: "somerandomuseridbythesender",
+          content: "Hello brother!"},
+          {id: "70",
+          sender: "somerandomuseridbythesender",
+          content: "How you been???"},
+          
+        ]
+      },
+      {
+        id: "4",
+        messages: [
+          {id: "69",
+          sender: "somerandomuseridbythesender",
+          content: "Hello brother!"},
+          {id: "70",
+          sender: "somerandomuseridbythesender",
+          content: "How you been???"},
+          
+        ]
+      },
+      {
+        id: "5",
+        messages: [
+          {id: "69",
+          sender: "somerandomuseridbythesender",
+          content: "Hello brother!"},
+          {id: "70",
+          sender: "somerandomuseridbythesender",
+          content: "How you been???"},
+          
+        ]
+      },
+      {
+        id: "6",
+        messages: [
+          {id: "69",
+          sender: "somerandomuseridbythesender",
+          content: "Hello brother!"},
+          {id: "70",
+          sender: "somerandomuseridbythesender",
+          content: "How you been???"},
+          
+        ]
+      },
+      {
+        id: "7",
+        messages: [
+          {id: "69",
+          sender: "somerandomuseridbythesender",
+          content: "Hello brother!"},
+          {id: "70",
+          sender: "somerandomuseridbythesender",
+          content: "How you been???"},
+          
+        ]
+      },
       
     ],
     notifications: [
@@ -129,6 +345,78 @@ export const users = [
     inbox: [
       {
         id: "1",
+        messages: [
+          {id: "69",
+          sender: "somerandomuseridbythesender",
+          content: "Hello brother!"},
+          {id: "70",
+          sender: "somerandomuseridbythesender",
+          content: "How you been???"},
+          
+        ]
+      },
+      {
+        id: "2",
+        messages: [
+          {id: "69",
+          sender: "somerandomuseridbythesender",
+          content: "Hello brother!"},
+          {id: "70",
+          sender: "somerandomuseridbythesender",
+          content: "How you been???"},
+          
+        ]
+      },
+      {
+        id: "3",
+        messages: [
+          {id: "69",
+          sender: "somerandomuseridbythesender",
+          content: "Hello brother!"},
+          {id: "70",
+          sender: "somerandomuseridbythesender",
+          content: "How you been???"},
+          
+        ]
+      },
+      {
+        id: "4",
+        messages: [
+          {id: "69",
+          sender: "somerandomuseridbythesender",
+          content: "Hello brother!"},
+          {id: "70",
+          sender: "somerandomuseridbythesender",
+          content: "How you been???"},
+          
+        ]
+      },
+      {
+        id: "5",
+        messages: [
+          {id: "69",
+          sender: "somerandomuseridbythesender",
+          content: "Hello brother!"},
+          {id: "70",
+          sender: "somerandomuseridbythesender",
+          content: "How you been???"},
+          
+        ]
+      },
+      {
+        id: "6",
+        messages: [
+          {id: "69",
+          sender: "somerandomuseridbythesender",
+          content: "Hello brother!"},
+          {id: "70",
+          sender: "somerandomuseridbythesender",
+          content: "How you been???"},
+          
+        ]
+      },
+      {
+        id: "7",
         messages: [
           {id: "69",
           sender: "somerandomuseridbythesender",
@@ -173,6 +461,78 @@ export const users = [
           
         ]
       },
+      {
+        id: "2",
+        messages: [
+          {id: "69",
+          sender: "somerandomuseridbythesender",
+          content: "Hello brother!"},
+          {id: "70",
+          sender: "somerandomuseridbythesender",
+          content: "How you been???"},
+          
+        ]
+      },
+      {
+        id: "3",
+        messages: [
+          {id: "69",
+          sender: "somerandomuseridbythesender",
+          content: "Hello brother!"},
+          {id: "70",
+          sender: "somerandomuseridbythesender",
+          content: "How you been???"},
+          
+        ]
+      },
+      {
+        id: "4",
+        messages: [
+          {id: "69",
+          sender: "somerandomuseridbythesender",
+          content: "Hello brother!"},
+          {id: "70",
+          sender: "somerandomuseridbythesender",
+          content: "How you been???"},
+          
+        ]
+      },
+      {
+        id: "5",
+        messages: [
+          {id: "69",
+          sender: "somerandomuseridbythesender",
+          content: "Hello brother!"},
+          {id: "70",
+          sender: "somerandomuseridbythesender",
+          content: "How you been???"},
+          
+        ]
+      },
+      {
+        id: "6",
+        messages: [
+          {id: "69",
+          sender: "somerandomuseridbythesender",
+          content: "Hello brother!"},
+          {id: "70",
+          sender: "somerandomuseridbythesender",
+          content: "How you been???"},
+          
+        ]
+      },
+      {
+        id: "7",
+        messages: [
+          {id: "69",
+          sender: "somerandomuseridbythesender",
+          content: "Hello brother!"},
+          {id: "70",
+          sender: "somerandomuseridbythesender",
+          content: "How you been???"},
+          
+        ]
+      },
       
     ],
     notifications: [
@@ -197,6 +557,78 @@ export const users = [
     inbox: [
       {
         id: "1",
+        messages: [
+          {id: "69",
+          sender: "somerandomuseridbythesender",
+          content: "Hello brother!"},
+          {id: "70",
+          sender: "somerandomuseridbythesender",
+          content: "How you been???"},
+          
+        ]
+      },
+      {
+        id: "2",
+        messages: [
+          {id: "69",
+          sender: "somerandomuseridbythesender",
+          content: "Hello brother!"},
+          {id: "70",
+          sender: "somerandomuseridbythesender",
+          content: "How you been???"},
+          
+        ]
+      },
+      {
+        id: "3",
+        messages: [
+          {id: "69",
+          sender: "somerandomuseridbythesender",
+          content: "Hello brother!"},
+          {id: "70",
+          sender: "somerandomuseridbythesender",
+          content: "How you been???"},
+          
+        ]
+      },
+      {
+        id: "4",
+        messages: [
+          {id: "69",
+          sender: "somerandomuseridbythesender",
+          content: "Hello brother!"},
+          {id: "70",
+          sender: "somerandomuseridbythesender",
+          content: "How you been???"},
+          
+        ]
+      },
+      {
+        id: "5",
+        messages: [
+          {id: "69",
+          sender: "somerandomuseridbythesender",
+          content: "Hello brother!"},
+          {id: "70",
+          sender: "somerandomuseridbythesender",
+          content: "How you been???"},
+          
+        ]
+      },
+      {
+        id: "6",
+        messages: [
+          {id: "69",
+          sender: "somerandomuseridbythesender",
+          content: "Hello brother!"},
+          {id: "70",
+          sender: "somerandomuseridbythesender",
+          content: "How you been???"},
+          
+        ]
+      },
+      {
+        id: "7",
         messages: [
           {id: "69",
           sender: "somerandomuseridbythesender",
@@ -241,6 +673,78 @@ export const users = [
           
         ]
       },
+      {
+        id: "2",
+        messages: [
+          {id: "69",
+          sender: "somerandomuseridbythesender",
+          content: "Hello brother!"},
+          {id: "70",
+          sender: "somerandomuseridbythesender",
+          content: "How you been???"},
+          
+        ]
+      },
+      {
+        id: "3",
+        messages: [
+          {id: "69",
+          sender: "somerandomuseridbythesender",
+          content: "Hello brother!"},
+          {id: "70",
+          sender: "somerandomuseridbythesender",
+          content: "How you been???"},
+          
+        ]
+      },
+      {
+        id: "4",
+        messages: [
+          {id: "69",
+          sender: "somerandomuseridbythesender",
+          content: "Hello brother!"},
+          {id: "70",
+          sender: "somerandomuseridbythesender",
+          content: "How you been???"},
+          
+        ]
+      },
+      {
+        id: "5",
+        messages: [
+          {id: "69",
+          sender: "somerandomuseridbythesender",
+          content: "Hello brother!"},
+          {id: "70",
+          sender: "somerandomuseridbythesender",
+          content: "How you been???"},
+          
+        ]
+      },
+      {
+        id: "6",
+        messages: [
+          {id: "69",
+          sender: "somerandomuseridbythesender",
+          content: "Hello brother!"},
+          {id: "70",
+          sender: "somerandomuseridbythesender",
+          content: "How you been???"},
+          
+        ]
+      },
+      {
+        id: "7",
+        messages: [
+          {id: "69",
+          sender: "somerandomuseridbythesender",
+          content: "Hello brother!"},
+          {id: "70",
+          sender: "somerandomuseridbythesender",
+          content: "How you been???"},
+          
+        ]
+      },
       
     ],
     notifications: [
@@ -265,6 +769,78 @@ export const users = [
     inbox: [
       {
         id: "1",
+        messages: [
+          {id: "69",
+          sender: "somerandomuseridbythesender",
+          content: "Hello brother!"},
+          {id: "70",
+          sender: "somerandomuseridbythesender",
+          content: "How you been???"},
+          
+        ]
+      },
+      {
+        id: "2",
+        messages: [
+          {id: "69",
+          sender: "somerandomuseridbythesender",
+          content: "Hello brother!"},
+          {id: "70",
+          sender: "somerandomuseridbythesender",
+          content: "How you been???"},
+          
+        ]
+      },
+      {
+        id: "3",
+        messages: [
+          {id: "69",
+          sender: "somerandomuseridbythesender",
+          content: "Hello brother!"},
+          {id: "70",
+          sender: "somerandomuseridbythesender",
+          content: "How you been???"},
+          
+        ]
+      },
+      {
+        id: "4",
+        messages: [
+          {id: "69",
+          sender: "somerandomuseridbythesender",
+          content: "Hello brother!"},
+          {id: "70",
+          sender: "somerandomuseridbythesender",
+          content: "How you been???"},
+          
+        ]
+      },
+      {
+        id: "5",
+        messages: [
+          {id: "69",
+          sender: "somerandomuseridbythesender",
+          content: "Hello brother!"},
+          {id: "70",
+          sender: "somerandomuseridbythesender",
+          content: "How you been???"},
+          
+        ]
+      },
+      {
+        id: "6",
+        messages: [
+          {id: "69",
+          sender: "somerandomuseridbythesender",
+          content: "Hello brother!"},
+          {id: "70",
+          sender: "somerandomuseridbythesender",
+          content: "How you been???"},
+          
+        ]
+      },
+      {
+        id: "7",
         messages: [
           {id: "69",
           sender: "somerandomuseridbythesender",

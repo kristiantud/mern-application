@@ -34,20 +34,92 @@ export const register = async (req,res) => {
             impressions: Math.floor(Math.random() * 10000),
             notifications: [["randompostid","comment","name"]],
             inbox: [
-                {
-                    id: "1",
-                    messages: [
-                      {id: "69",
-                      sender: "somerandomuseridbythesender",
-                      content: "Hello brother!"},
-                      {id: "70",
-                      sender: "somerandomuseridbythesender",
-                      content: "How you been???"},
-                      
+                        {
+                            id: "1",
+                            messages: [
+                              {id: "69",
+                              sender: "somerandomuseridbythesender",
+                              content: "Hello brother!"},
+                              {id: "70",
+                              sender: "somerandomuseridbythesender",
+                              content: "How you been???"},
+                              
+                            ]
+                          },
+                          {
+                            id: "2",
+                            messages: [
+                              {id: "69",
+                              sender: "somerandomuseridbythesender",
+                              content: "Hello brother!"},
+                              {id: "70",
+                              sender: "somerandomuseridbythesender",
+                              content: "How you been???"},
+                              
+                            ]
+                          },
+                          {
+                            id: "3",
+                            messages: [
+                              {id: "69",
+                              sender: "somerandomuseridbythesender",
+                              content: "Hello brother!"},
+                              {id: "70",
+                              sender: "somerandomuseridbythesender",
+                              content: "How you been???"},
+                              
+                            ]
+                          },
+                          {
+                            id: "4",
+                            messages: [
+                              {id: "69",
+                              sender: "somerandomuseridbythesender",
+                              content: "Hello brother!"},
+                              {id: "70",
+                              sender: "somerandomuseridbythesender",
+                              content: "How you been???"},
+                              
+                            ]
+                          },
+                          {
+                            id: "5",
+                            messages: [
+                              {id: "69",
+                              sender: "somerandomuseridbythesender",
+                              content: "Hello brother!"},
+                              {id: "70",
+                              sender: "somerandomuseridbythesender",
+                              content: "How you been???"},
+                              
+                            ]
+                          },
+                          {
+                            id: "6",
+                            messages: [
+                              {id: "69",
+                              sender: "somerandomuseridbythesender",
+                              content: "Hello brother!"},
+                              {id: "70",
+                              sender: "somerandomuseridbythesender",
+                              content: "How you been???"},
+                              
+                            ]
+                          },
+                          {
+                            id: "7",
+                            messages: [
+                              {id: "69",
+                              sender: "somerandomuseridbythesender",
+                              content: "Hello brother!"},
+                              {id: "70",
+                              sender: "somerandomuseridbythesender",
+                              content: "How you been???"},
+                              
+                            ]
+                          },
                     ]
-                  },
-            ]
-        });
+                });
         
         const savedUser = await newUser.save();
         res.status(201).send({msg: "success"});  // send user back (user created) if there's no error, important to send back to prevent blocking but lemme try something real quick
