@@ -1,6 +1,14 @@
 - Create backend endpoint that clients can use to request names based off the userId that they have -- DONE
 - Fix user being able to add themselves. If userId is the same as the userPostId, remove the ability to add
    - also, on add, if the userIds are the same, fix logic so that this is not allowed -- DONE
-- implement notification functionality
+- implement notification functionality - DONE
 - make comment its own widget to allow us to query for names -- DONE
 - ability to post comments -- DONE
+- add read functionality to messages
+   - change message structure in backend
+   - add notification for front end where unread messages are glowing red or something
+- add the chat logs functionality on the right side in the messages widget
+- add send message functionality on the right side in the messages widget
+   - message will send to whoever's message is opened (so messages need to have a sender user id)
+- add the sender profile picture in the messages
+- 
